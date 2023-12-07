@@ -1,0 +1,1091 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width" />
+		<meta name="Description" content="Please, Expose your RSS">
+
+		<meta name="generator" content="Eleventy v2.0.0">
+
+		<title>Please, Expose your RSS</title>
+
+        <link rel="stylesheet" href="/assets/css/app.css?1701703990506" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="/assets/highlight.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+
+        <link rel="alternate" type="application/rss+xml" title="Robb Knight RSS Feed" href="https://rknight.me/feed.xml" />
+        <link rel="alternate" type="application/json" title="Robb Knight JSON Feed" href="https://rknight.me/feed.json" />
+
+        <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+        <link rel="manifest" href="/assets/icons/site.webmanifest">
+
+        <script src="https://cdn.usefathom.com/script.js" data-site="ISEJUYJY" defer></script>
+
+        <script src="/assets/lite-yt.js"></script>
+
+		<meta property="og:title" content="Please, Expose your RSS" />
+        <meta property="description" content="I noticed a lot of people don&#39;t expose their RSS feeds" />
+		<meta property="og:description" content="I noticed a lot of people don&#39;t expose their RSS feeds" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://rknight.me/please-expose-your-rss/" />
+        <meta property="og:image" content="https://rknight.me/assets/img/preview.png">
+
+        <link rel="preconnect" href="https://fonts.bunny.net">
+		<link href="https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i|source-code-pro:400" rel="stylesheet" />
+
+        <link rel="webmention" href="https://webmention.io/rknight.me/webmention" />
+        <link rel="pingback" href="https://webmention.io/rknight.me/xmlrpc" />
+
+        <link rel="canonical" href="https://rknight.me/please-expose-your-rss/" />
+	</head>
+	<body>
+
+        <div style="margin-left:-10px;margin-right:-10px;font-weight: bold;font-size:1.5em;padding:10px;background: black;color:white;display:flex;align-items:center;justify-content:center;text-align:center;">
+            <p style="margin-bottom: 0;">This is an archived version of the site. Visit <a style="color:white" href="https://rknight.me">rknight.me</a> for the current version.</p>
+        </div>
+
+		<a style="display: none;" rel="me" href="https://social.lol/@robb">Mastodon</a>
+        <a style="display: none;" href="https://github.com/rknightuk" rel="me">github.com/rknightuk</a>
+        <a style="display: none;" href="https://proven.lol/aaecd5">proven.lol/aaecd5</a>
+
+        <div style="max-width: 800px;margin: 0 auto;">
+
+		<header>
+			<div class="main-header"><a href="/">Robb Knight</a></div>
+            <div class="social-links">
+                <a href="https://social.lol/@robb" class="social-masto">
+                    <svg class="icon">
+                        <use xlink:href="#mastodon"></use>
+                    </svg>
+                </a>
+                <a href="https://github.com/rknightuk" class="social-gh">
+                    <svg class="icon">
+                        <use xlink:href="#github"></use>
+                    </svg>
+                </a>
+                <a href="/subscribe" class="social-subscribe">
+                    <svg class="icon">
+                        <use xlink:href="#rss"></use>
+                    </svg>
+                </a>
+            </div>
+		</header>
+
+		<div class="nav">
+			<div class="nav__list">
+				<a class="nav__list--item box" href="/blog/">Blog</a>
+
+                <a class="nav__list--item box" href="/micro">Microblog</a>
+
+                <a class="nav__list--item box" href="/log">Log</a>
+
+                <a class="nav__list--item box" href="/projects/">Projects</a>
+
+                <a class="nav__list--item box" href="/collections/">Collections</a>
+
+                <a class="nav__list--item box" href="/now">/now</a>
+
+                <a class="nav__list--item box" href="/uses/">/uses</a>
+
+                <a class="nav__list--item box" href="/save">/Save</a>
+
+                <a class="nav__list--item box" href="/search">Search</a>
+
+                <a class="nav__list--item box" href="https://intersect.rknight.me/">Wiki</a>
+			</div>
+		</div>
+
+		<div class="box main-content">
+			
+				<h2>Please, Expose your RSS</h2>
+			
+			
+<div class="post-date">2023-11-06</div>
+
+<span class="post" data-pagefind-body>
+	<p>Earlier this week I had a need to manually find a bunch of people's RSS feed links. It seemed simple enough: go to their website and look for an RSS/Subscribe link but I was surprised to find that a lot of people don't have a link anywhere to their feed.</p>
+<p>Even if people only ever add your website into their feed reader and let the app find the RSS feed (see below for more info on this), showing an RSS link reminds people that RSS exists, a win for the open web.</p>
+<p>My second step when finding a link failed was to use this handy JS snippet from my <a href="https://podduration.rknight.me">Podcast Duration project</a>:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">return</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'link'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">l</span> <span class="token operator">=></span> l<span class="token punctuation">.</span>type<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token string">'application/rss+xml'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">?.</span>href</code></pre>
+<p>This looks for a <code>&lt;link&gt;</code> tag on the website that has a type of <code>application/rss+xml</code>. This is called RSS auto-discovery and is a standard way to expose RSS feeds to help <a href="https://www.rssboard.org/rss-autodiscovery">browsers and other software to automatically find a site's RSS feed</a>.</p>
+<p>Like the standard link, a lot of sites were also missing this. This is (at least as a first step) what feed reeders like <a href="https://netnewswire.com">NetNewsWire</a> will use to automatically find a feed when you paste in a URL. If you have an RSS feed, you should have the following in the <code>head</code> of your website:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alternate<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>application/rss+xml<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>My Cool Website<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://example.com/feed.xml<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br><br><span class="token comment">&lt;!-- use application/atom+xml for an atom feed --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alternate<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>application/atom+xml<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>My Cool Website<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://example.com/atom.xml<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>If you have multiple feeds, you can have more than one <code>link</code> tag that links to those feeds as well. For example, say you have a <a href="https://www.jsonfeed.org">JSON feed</a> and a podcast feed you want to link to:</p>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Website RSS feed --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alternate<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>application/rss+xml<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>My Cool Website<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://example.com/feed.xml<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br><br><span class="token comment">&lt;!-- Website JSON feed --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alternate<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>application/json<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>My Cool Website but JSON<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://example.com/feed.json<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br><br><span class="token comment">&lt;!-- Podcast RSS feed --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alternate<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>application/rss+xml<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>My Cool Podcast<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://example.com/podcast.xml<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>Please, expose your RSS.</p>
+
+</span>
+
+<footer>
+    <p><a href="https://social.lol/@robb">Follow me on Mastodon</a> or <a href="/subscribe">Subscribe with RSS</a></p>
+</footer></div>
+
+<div class="box webmentions">
+
+<style>
+
+    .webmentions h4 {
+        margin: 10px 0;
+    }
+
+    .webmentions--likeboost {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .webmentions--likeboost a {
+        margin-left: -10px;
+    }
+
+    .webmentions--likeboost img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 3px solid white;
+        transition: 0.2s linear;
+    }
+
+    .webmentions--likeboost img:hover,
+    .webmentions--comment--header img:hover {
+        border: 3px solid #E93BBF;
+    }
+
+    .webmentions--comment {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .webmentions--comment--header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .webmentions--comment--header img {
+        border: 3px solid white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        transition: 0.2s linear;
+    }
+
+    .webmentions--comment--header--name {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .webmentions--comment--header--name img {
+        margin-right: 10px;
+    }
+</style>
+    <h4>Likes</h4>
+    <div class="webmentions--likeboost">
+            <a target="_blank" rel="noopener" href="https://social.lol/@geekyaubergine"><img src="https://webmention.io/avatar/media.social.lol/3273ffa1345bd38ab81be35e2ca1ae975a548f8098d5957602eb90ff02add122.png" title="Zoe Aubert ???????? ????️‍???? :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@devondundee"><img src="https://webmention.io/avatar/media.social.lol/f3484e71c11588184b0d77e55aff730d2f3eca5b7f518ab4d59ab51621c1ba9c.jpg" title="Devon Dundee"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@tylersticka"><img src="https://webmention.io/avatar/media.social.lol/a3e8f10c9190a71c8b5813cb592445962f91252468058abbac98ecff88025553.png" title="Tyler Sticka"></a>
+        
+            <a target="_blank" rel="noopener" href="https://hachyderm.io/@cabinet20"><img src="https://webmention.io/avatar/media.social.lol/d2083d7e545ecd9e9a6689c5e8e533235189ea21b4acc48ed36a8074ec72e3bd.png" title="Cabinet20 :swift: :typescript:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@habibcham"><img src="https://webmention.io/avatar/media.social.lol/91febc612ce89a393d86bb96fdc073d66950390a0a1039877ebb9ee7ff0da255.png" title="Habib"></a>
+        
+            <a target="_blank" rel="noopener" href="https://nileane.fr/@nileane"><img src="https://webmention.io/avatar/media.social.lol/d6a333364a8a04095cdd119755c0623b7ebc5ebfacad08d2e6c367616690c294.jpg" title="Niléane"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodo.neoliber.al/@petes_bread_eqn_xls"><img src="https://webmention.io/avatar/media.social.lol/db6ea14d02f32e604d7719a9bad89b9bc1d76a695f44f66422dbcc7cfdd7207c.jpg" title="petes_bread_eqn_xls"></a>
+        
+            <a target="_blank" rel="noopener" href="https://duck.haus/@joesteel"><img src="https://webmention.io/avatar/media.social.lol/b0d8141a6b873e4a8fb3ecaa5a31ebfdc31e209761ff7d8f8cf7f54b7d77c7be.jpg" title="Joe Rosensteel ????️‍????"></a>
+        
+            <a target="_blank" rel="noopener" href="https://hachyderm.io/@paigerduty"><img src="https://webmention.io/avatar/media.social.lol/594d85a89cb95f2ce39164ebac50853bad3b1b207b98d9af5f6ac86b349f661d.jpg" title="paigerduty"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@ichris"><img src="https://webmention.io/avatar/media.social.lol/902b7d193c15e6a521142dcdd4487290377d7b726fbf90376d0b220e483bf014.jpg" title="Chris Enns"></a>
+        
+            <a target="_blank" rel="noopener" href="https://indieweb.social/@mikehaynes"><img src="https://webmention.io/avatar/media.social.lol/30e89df379cb98bb578adf65d27b7f170f7286cbb854fd9b40f6987738c2a666.gif" title="Mike Haynes"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@jason"><img src="https://webmention.io/avatar/media.social.lol/d03b0c477be3e5a57672ec1ce38b8aab49b3d3136b3b1b3aab389a8064ecd290.jpg" title="//Jason"></a>
+        
+            <a target="_blank" rel="noopener" href="https://front-end.social/@ashur"><img src="https://webmention.io/avatar/media.social.lol/47f9e3cea1d21932327b192e59a0faf2fb69a491bb0f1df89b0ed69800960171.jpg" title="Ashur Cabrera"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@Edent"><img src="https://webmention.io/avatar/media.social.lol/01feba97e6f77064005f31709c9f2aaf6f21241d4a1eed26db6bbdd36a238087.jpg" title="Terence Eden"></a>
+        
+            <a target="_blank" rel="noopener" href="https://fediverse.zachleat.com/@zachleat"><img src="https://webmention.io/avatar/media.social.lol/f4e48698b4079b12cff61448419d6cf2a13293b27bdaa0a551de22a70e402f70.png" title="Zach Leatherman"></a>
+        
+            <a target="_blank" rel="noopener" href="https://chaos.social/@joel"><img src="https://webmention.io/avatar/media.social.lol/782423519c004e1642dc78fb07c97e18623f480dfaf8e57d2b0d1105b943c1bc.png" title="Joël ????"></a>
+        
+            <a target="_blank" rel="noopener" href="https://infosec.exchange/@shellsharks"><img src="https://webmention.io/avatar/media.social.lol/ff20948fd7501ec83fd9f598b88176291db9eac0fe49555c7dc6a34d2ae4fc3f.png" title="shellsharks"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@mihobu"><img src="https://webmention.io/avatar/media.social.lol/2157da884969752ceb03ed5e23a5c8cddc0bc6d0323856f06885f9f8f24e8824.png" title="Michael Burkhardt"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.publicinterest.town/@krusynth"><img src="https://webmention.io/avatar/media.social.lol/162844a3809e5073b9f97e0c1191e40d19d6b2b8309ce13bb2e5bdb8f1148188.jpg" title="Bill Hunt"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@JasonNeel"><img src="https://webmention.io/avatar/media.social.lol/d31d4a09ed1f70684e9e7e9b362e8736e0933772467050f47e20a5767dc9c2bf.jpg" title="Jason Neel"></a>
+        
+            <a target="_blank" rel="noopener" href="https://definitely.social/@mattlehrer"><img src="https://webmention.io/avatar/media.social.lol/22a144c8c528b97f41b467939e50994670ae40b88295106af9a29e1055d5eee6.jpg" title="Matt Lehrer"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mas.to/@raulcraveiro"><img src="https://webmention.io/avatar/media.social.lol/3c42772d4e0b7176bdf013ba7a513aa2317f3679c06fbbe84d6fc6895b6b7791.png" title="Raul Craveiro :verifiedlgbt:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@sovtechfund"><img src="https://webmention.io/avatar/media.social.lol/dcf104eedc7db7cc6aaf201445f4cc7195412c2d04dbe4e4736132d40a0d31a9.png" title="Sovereign Tech Fund"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@fromjason"><img src="https://webmention.io/avatar/media.social.lol/75ca9c974d813f538c3fb2827e415b3b60f94ca5321aef069dae3e87a2cdc42c.png" title="Jason"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.jsteuernagel.de/@jonatan"><img src="https://webmention.io/avatar/media.social.lol/7781455ea983a5ad491bd60a57c7c2fb9dcf0b890c94c4f2b00b13903eb99509.jpg" title="Jonatan Steuernagel"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@gabz"><img src="https://webmention.io/avatar/media.social.lol/48955657d4c26959388aaaaa0b9a31aff934d5e66640db24f78a2fd7a6098a9c.png" title="gabz :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@zackva"><img src="https://webmention.io/avatar/media.social.lol/3710d9f987ade8509d4a5d7f5f443ff43d514add7ec0a4aea5d82c01d152b13c.jpg" title="Zack Apiratitham"></a>
+        
+            <a target="_blank" rel="noopener" href="https://ruby.social/@timriley"><img src="https://webmention.io/avatar/media.social.lol/db03071e9ffdd9d17170e52860e7bda7f1b0501ee87f80eaaa47e091686e8cfd.png" title="Tim Riley"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@mijo"><img src="https://media.social.lol/accounts/avatars/109/875/559/775/012/328/original/15229178848fdcb4.webp" title="L. Carlos Pando :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.heise.de/@hih"><img src="https://webmention.io/avatar/media.social.lol/30233e28c87e4742d2ccf707c8cccb10156e33d5ae5210f8e159e966fef85cab.jpg" title="Hilko Holweg"></a>
+        
+            <a target="_blank" rel="noopener" href="https://freeradical.zone/@pinsk"><img src="https://webmention.io/avatar/media.social.lol/85c4f9e7848e757c62f03548644e7d408a082e8c6a8f72ba0e5eecb81ae9aa9a.jpg" title="Danny the Weary"></a>
+        
+            <a target="_blank" rel="noopener" href="https://aus.social/@dcbuchan"><img src="https://webmention.io/avatar/media.social.lol/0cd14a411b6f87339b19d137ca85d9335b157a820853681e9f2b0be518f6ae5e.jpg" title="Quantum Gardener ????????"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.online/@tsvenson"><img src="https://webmention.io/avatar/media.social.lol/b371cc00961185a2c48fdb1a75ad371d8b45ae7d9b44cb34a26d3597d9031ccf.jpg" title="Thomas Svensson ????"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@flamed"><img src="https://webmention.io/avatar/media.social.lol/f1269043577361277d2ddb60a4532e13ae807793cbd6d83cb649c41d03945718.jpg" title="fLaMEd"></a>
+        
+            <a target="_blank" rel="noopener" href="https://podcastindex.social/@misener"><img src="https://webmention.io/avatar/media.social.lol/d4aa74666dec31c375dc37e9a5d432e894ae5249f16b5c7830f7015ff98e22af.jpg" title="Dan Misener"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@plankton"><img src="https://webmention.io/avatar/media.social.lol/40d3e440a65be54b69320f4556085043399768fdb686bf13c2589db3e3ba5c0a.jpg" title="Darren Cadwallader"></a>
+        
+            <a target="_blank" rel="noopener" href="https://fosstodon.org/@krinkle"><img src="https://webmention.io/avatar/media.social.lol/01d3e97663520155183a7170954a858dc8278256c7d43310365a98bac78294dd.jpg" title="Timo Tijhof"></a>
+        
+            <a target="_blank" rel="noopener" href="https://indieweb.social/@alannorbauer"><img src="https://webmention.io/avatar/media.social.lol/f599c095f62287e0ff292e1553402362f42f5a44f11f4cf82d953b7bb7df1afe.jpg" title="Alan Norbauer"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@wolfr"><img src="https://webmention.io/avatar/media.social.lol/cb01fac41c9a4c6c2adcf7f2a3eb2c46b8758faf4e11c5c478a7bdb438d2783a.jpg" title="Wolfr"></a>
+        
+            <a target="_blank" rel="noopener" href="https://octodon.social/@deafferret"><img src="https://webmention.io/avatar/media.social.lol/5cbc3b62bf3801c7305185ec7f1a8c15ca791fe0cb4cce2bfbb1d61dc8477e21.png" title="Jay Hannah"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@effika"><img src="https://webmention.io/avatar/media.social.lol/578037cc29a5f369e4f8fa7802d164d78f99c4d393c28744c6589e49821cf0d3.jpg" title="effika"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.peterjanes.ca/@me"><img src="https://webmention.io/avatar/media.social.lol/af7c0b655169807f6823041712828d9df8aa5af1b01ac2d7f9b9215bf96cd775.png" title="Peter Janes"></a>
+        
+            <a target="_blank" rel="noopener" href="https://post.lurk.org/@dsh1705"><img src="https://webmention.io/avatar/media.social.lol/13437cde0061fc381158063f222966fb77aad8e42a04ee97afebc78b166f65ab.png" title="David H."></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@tdh"><img src="https://webmention.io/avatar/media.social.lol/61d94618f2dc049be18e9bbd609cf51bf9e5e4c79ef77470be1b4da5953c08c8.jpg" title="Thord D. Hedengren"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@dominickjay"><img src="https://webmention.io/avatar/media.social.lol/5fdeb1a659236e3e82c6b5e51b88857eb1e830bf7520797ecea4bc8fc3349875.png" title="Dom Jay"></a>
+        
+            <a target="_blank" rel="noopener" href="https://seocommunity.social/@simoncox"><img src="https://webmention.io/avatar/media.social.lol/215827d4bf47691c7d317982fdc2d14d3c3f43eabd751777bdde75d16c27a971.gif" title="Simon Cox :SEO:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@heyscottyj"><img src="https://webmention.io/avatar/media.social.lol/c93a23a20ed0ff67866e353bac570718835e15902f3f811df855cc5472400305.jpg" title="Scotty Jackson"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mas.to/@ravipatel"><img src="https://webmention.io/avatar/media.social.lol/e660dfcd918b8360d02366bed9c178ad42cbd4e5f5aeb9f124abdcbbd4f6a5c7.png" title="ravi"></a>
+        
+            <a target="_blank" rel="noopener" href="https://sfba.social/@dys_morphia"><img src="https://webmention.io/avatar/media.social.lol/3410dd1e083cc19963a20731129d59920f003393b7168a8a1c3a7583ede85c25.jpg" title="Dysmorphia????????????????"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@grooovinger"><img src="https://webmention.io/avatar/media.social.lol/5e5cc565a57db93d127dfa935a01ef533bca867fa64c31463636f6f53e4e5d88.jpg" title="Martin Grubinger"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@dominickjay"><img src="https://webmention.io/avatar/media.social.lol/5fdeb1a659236e3e82c6b5e51b88857eb1e830bf7520797ecea4bc8fc3349875.png" title="Dom Jay"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodonapp.uk/@witewulf"><img src="https://webmention.io/avatar/media.social.lol/47fe7c2a897a37a6b0a44e250b7dbb4f9af4e7e596457f0093f2b9f3ec5817f4.jpg" title="Gary"></a>
+        
+            <a target="_blank" rel="noopener" href="https://fosstodon.org/@chrishannah"><img src="https://webmention.io/avatar/media.social.lol/640e755cb151ffd4af19f2d84f44532dd4661504467e9bfba62c9fc17ba7feaa.jpg" title="Chris Hannah"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mstdn.social/@ashleemboyer"><img src="https://webmention.io/avatar/media.social.lol/64720ed925408338ff00b06ba4960d07ba4341d48d393e56dc9b110a8fcab3b1.jpg" title="Ashlee"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.hechtinsgefecht.de/@hig"><img src="https://webmention.io/avatar/media.social.lol/1aad6e413638ff949fc5a979837f64cf7ded3c191029165354b8e35050411102.png" title="HECHT INS GEFECHT"></a>
+        
+            <a target="_blank" rel="noopener" href="https://fosstodon.org/@thomasapowell"><img src="https://webmention.io/avatar/media.social.lol/80975e810f965a5ee1092355789a6a97fb990440ce576dfd504e3d0b84927f0e.jpg" title="ThomasAPowell"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@may"><img src="https://webmention.io/avatar/media.social.lol/0bed636997a51c9228726ee781080608d9955d7ca46b55a43e41b244fe71cc5d.png" title="May :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://hachyderm.io/@andydavies"><img src="https://webmention.io/avatar/media.social.lol/a67a04475d2e985a30f8c8dbca9c3ee46da776919379915a9b62e2e78049ec11.jpg" title="Andy Davies"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@AnthonyBaker"><img src="https://webmention.io/avatar/media.social.lol/8ce5297445aea7176d7eb1a570e94b80735f47ecb49f84952848441a8b5651ec.png" title="Anthony Baker"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@tomhazledine"><img src="https://webmention.io/avatar/media.social.lol/67a03a8a8cbb481aadab9b3d0cb4dc6d8de0a51ed35f5b7540f4e0b9b2b81708.jpg" title="tomhazledine"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@josemunozmatos"><img src="https://webmention.io/avatar/media.social.lol/ff595a83fc34580c63da3fee5ec752bce3b37f58b28f974b60b3c89a6bb26203.jpg" title="josemunozmatos"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@murmel_social"><img src="https://webmention.io/avatar/media.social.lol/ff7ac51d5bcab5b77b771c9702517d1e1ea191daaa1829132e2dfa6732480023.jpg" title="Murmel"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@feedle"><img src="https://webmention.io/avatar/media.social.lol/c8b70613d8a80369c7dd532216774c9938a070dacf5d0b38d320899712e4df06.jpg" title="feedle"></a>
+        
+            <a target="_blank" rel="noopener" href="https://front-end.social/@ashur"><img src="https://webmention.io/avatar/media.social.lol/47f9e3cea1d21932327b192e59a0faf2fb69a491bb0f1df89b0ed69800960171.jpg" title="Ashur Cabrera"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@heygarrett"><img src="https://webmention.io/avatar/media.social.lol/c0d532df17c09a5dca1a72e912a84d881a8d5c51275ea59157d5a3b67aedd884.jpg" title="Garrett :spinning_pinwheel:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.coop/@kaleb"><img src="https://webmention.io/avatar/media.social.lol/55d6b0d4321a5fef9b6ea28b1c4518cfb0b2bcc9a6a4402bec26f0f309e2d212.jpg" title="????aleb :CreativeCommons:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://infosec.exchange/@tychotithonus"><img src="https://webmention.io/avatar/media.social.lol/9f9c01eaf97306c1c38da4a7b72bc7ea2f6508bde96eaafe3ce421c42d0823be.jpg" title="Royce Williams"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@webology"><img src="https://webmention.io/avatar/media.social.lol/12baccace7d6fc99e141b3a5f20fb332a1940fe82abf488d34466e0249ef140d.jpg" title="Jeff Triplett"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@flamed"><img src="https://webmention.io/avatar/media.social.lol/f1269043577361277d2ddb60a4532e13ae807793cbd6d83cb649c41d03945718.jpg" title="fLaMEd"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@splendorr"><img src="https://webmention.io/avatar/media.social.lol/9f84fb5e6d838a8b4ba7b8b28e1a3e96adb327351577141b11454ab4a373f43d.jpg" title="nick splendorr ✨"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@nicolas"><img src="https://webmention.io/avatar/media.social.lol/fdffcd67a931f85b5baff53cc03623ec8c4fbb887e6c7b8af219c88b23f7ef17.png" title="Nicolas Cropp :verified_root:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@rasterweb"><img src="https://webmention.io/avatar/media.social.lol/3d05039bab9e7242999e8cedc32098dbd3c361b59f2e1bfad112fd8cb0c347ef.jpg" title="Pete Prodoehl ????"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@fromjason"><img src="https://webmention.io/avatar/media.social.lol/75ca9c974d813f538c3fb2827e415b3b60f94ca5321aef069dae3e87a2cdc42c.png" title="Jason"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@Heiji"><img src="https://webmention.io/avatar/media.social.lol/05f0aa75781fa779a112c580a60bf87ece48cf8724b863777ed2f414429524c1.jpg" title="Heiji"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@exkclamation"><img src="https://webmention.io/avatar/media.social.lol/f147ccb87ecf1cdd8c2411f4ff122a2c0c80a003381f4ecd99f999bdba93d4a9.jpg" title="kcǃ"></a>
+        
+            <a target="_blank" rel="noopener" href="https://laker.gay/@la"><img src="https://media.social.lol/cache/accounts/avatars/110/250/128/441/658/544/original/30c49d039b70679b.webp" title="I Love The Ivy OH!"></a>
+        
+            <a target="_blank" rel="noopener" href="https://curmudgeon.cafe/@dave_rogers"><img src="https://webmention.io/avatar/media.social.lol/7305d7ab56c256c53b1782e1b7efa1889f43b13b9db5e52adead727ad0ac45d6.jpg" title="Dave Rogers"></a>
+        
+            <a target="_blank" rel="noopener" href="https://curmudgeon.cafe/@fahrni"><img src="https://webmention.io/avatar/media.social.lol/c8df3dbf748c0b71f1f61dcdbeb70dc9846180f23d1460b2d5f175f2fd977bdf.png" title="Rob Fahrni"></a>
+        
+            <a target="_blank" rel="noopener" href="https://octodon.social/@deafferret"><img src="https://webmention.io/avatar/media.social.lol/5cbc3b62bf3801c7305185ec7f1a8c15ca791fe0cb4cce2bfbb1d61dc8477e21.png" title="Jay Hannah"></a>
+        
+            <a target="_blank" rel="noopener" href="https://ruby.social/@jswright61"><img src="https://webmention.io/avatar/media.social.lol/fb1b27cfa2749944cfed4bfa0ebb69eab6a96ecfcba3b94d0783a7a66453aee4.png" title="Scott Wright ????️‍????????️‍⚧️"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.xyz/@gizmomathboy"><img src="https://webmention.io/avatar/media.social.lol/973f63d89bb80f3da4c16e580c754eee5305a50111a5b90d4c9a506395f2b1a3.png" title="gizmomathboy, FC"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mstdn.social/@kkarhan"><img src="https://webmention.io/avatar/media.social.lol/91fc91c0b3e848d121def3799feda42789ac12523fda16a737801f5ea905794b.png" title="Kevin Karhan :verified:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.sdf.org/@mjgardner"><img src="https://webmention.io/avatar/media.social.lol/7e7f8e821f5c0e9ef8c957b7c68aca0d9cab537277ebcb474988e588ab79a8eb.png" title="Mark Gardner ‍:sdf:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://layer8.space/@exterm"><img src="https://webmention.io/avatar/media.social.lol/2d6d8e4810bdce101d9d3ca19fbe63fc54475e94777f44312878e9de1fe23a90.jpg" title="exterm@layer8.space"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@tylersticka"><img src="https://webmention.io/avatar/media.social.lol/a3e8f10c9190a71c8b5813cb592445962f91252468058abbac98ecff88025553.png" title="Tyler Sticka"></a>
+        
+            <a target="_blank" rel="noopener" href="https://functional.cafe/@schaueho"><img src="https://webmention.io/avatar/media.social.lol/40e8b9c243cb8c348f0cdbba1a942db9f548345aafc13c145a3269995e73d3a1.jpg" title="Holger"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@Palleas"><img src="https://webmention.io/avatar/media.social.lol/c731bb05d83a46184a4bcb94308e3e504696cee05106d1767a61b0d0260ba1dd.png" title="Romain Pouclet"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@jbzfn"><img src="https://webmention.io/avatar/media.social.lol/27a29f8e07158b0e7cc5f493cea5ef01ea9614cb69950f465ebd2a02747cfc3c.png" title="jbz"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@vesan"><img src="https://webmention.io/avatar/media.social.lol/aa31fd9c38efc63d24247ea8f3f8f13979e13fb98266831aee2e4fc5ee63cd30.jpg" title="Vesa Vänskä"></a>
+        
+            <a target="_blank" rel="noopener" href="https://fosstodon.org/@kcaran"><img src="https://webmention.io/avatar/media.social.lol/e957f7e950e1b2e37f364b5aad4b3f779d577d5d2bb1cae927810c9a24c2a74d.jpg" title="Keith Carangelo"></a>
+        
+    </div>
+
+
+
+    <h4>Boosts</h4>
+    <div class="webmentions--likeboost">
+            <a target="_blank" rel="noopener" href="https://social.lol/@maique"><img src="https://webmention.io/avatar/media.social.lol/4611ac3983aefe1521bd80b88124559132873e80ea366262c3495bb5c61e3afa.jpg" title="maique :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@geekyaubergine"><img src="https://webmention.io/avatar/media.social.lol/3273ffa1345bd38ab81be35e2ca1ae975a548f8098d5957602eb90ff02add122.png" title="Zoe Aubert ???????? ????️‍???? :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@pimoore"><img src="https://webmention.io/avatar/media.social.lol/91bf5774a5cb5911e3bd5b8055b8de6e5b9f823cf5fc02e194fe94cd5e06624a.jpg" title="Pete Moore"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@habibcham"><img src="https://webmention.io/avatar/media.social.lol/91febc612ce89a393d86bb96fdc073d66950390a0a1039877ebb9ee7ff0da255.png" title="Habib"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodo.neoliber.al/@petes_bread_eqn_xls"><img src="https://webmention.io/avatar/media.social.lol/db6ea14d02f32e604d7719a9bad89b9bc1d76a695f44f66422dbcc7cfdd7207c.jpg" title="petes_bread_eqn_xls"></a>
+        
+            <a target="_blank" rel="noopener" href="https://duck.haus/@joesteel"><img src="https://webmention.io/avatar/media.social.lol/b0d8141a6b873e4a8fb3ecaa5a31ebfdc31e209761ff7d8f8cf7f54b7d77c7be.jpg" title="Joe Rosensteel ????️‍????"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@ichris"><img src="https://webmention.io/avatar/media.social.lol/902b7d193c15e6a521142dcdd4487290377d7b726fbf90376d0b220e483bf014.jpg" title="Chris Enns"></a>
+        
+            <a target="_blank" rel="noopener" href="https://tacobelllabs.net/@ultranurd"><img src="https://webmention.io/avatar/media.social.lol/cc04343f002d0a572acd533dec7b85d9fb6f79f3a6160e5db2ab1c33b2daf620.jpg" title="Nicolas Ward"></a>
+        
+            <a target="_blank" rel="noopener" href="https://front-end.social/@ashur"><img src="https://webmention.io/avatar/media.social.lol/47f9e3cea1d21932327b192e59a0faf2fb69a491bb0f1df89b0ed69800960171.jpg" title="Ashur Cabrera"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@jason"><img src="https://webmention.io/avatar/media.social.lol/d03b0c477be3e5a57672ec1ce38b8aab49b3d3136b3b1b3aab389a8064ecd290.jpg" title="//Jason"></a>
+        
+            <a target="_blank" rel="noopener" href="https://fediverse.zachleat.com/@zachleat"><img src="https://webmention.io/avatar/media.social.lol/f4e48698b4079b12cff61448419d6cf2a13293b27bdaa0a551de22a70e402f70.png" title="Zach Leatherman"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@krabf"><img src="https://webmention.io/avatar/media.social.lol/698134a3d5536710e9190e66614556be98ad0f7ef98530684a01ef3443582540.png" title="Kush"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@ryan"><img src="https://webmention.io/avatar/media.social.lol/ecd0d4b4896065d62fd3ea5fc909b5e781f12fc3733fcd2891da353b4c885d35.png" title="ryan"></a>
+        
+            <a target="_blank" rel="noopener" href="https://octodon.social/@clew"><img src="https://webmention.io/avatar/media.social.lol/bea2a8c127162c416b3e8851674a6c389b83c48a3b77dd8cd1337d8706f53c48.jpg" title="clew"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.publicinterest.town/@krusynth"><img src="https://webmention.io/avatar/media.social.lol/162844a3809e5073b9f97e0c1191e40d19d6b2b8309ce13bb2e5bdb8f1148188.jpg" title="Bill Hunt"></a>
+        
+            <a target="_blank" rel="noopener" href="https://fosstodon.org/@thornbill"><img src="https://webmention.io/avatar/media.social.lol/6c7745a216af3c91116dae84047602d3ee1bef9e461e2bd602176b246f44e6d8.jpg" title="thornbill :jellyfin: :tux:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://indieweb.social/@kristoferjoseph"><img src="https://webmention.io/avatar/media.social.lol/0e793ca28ac74afd21f767fb6ae5a0c1174864eeb0e0c7e591abfa7603ee0d19.jpg" title="Kristofer Joseph"></a>
+        
+            <a target="_blank" rel="noopener" href="https://indieweb.social/@alesroubicek"><img src="https://webmention.io/avatar/media.social.lol/4f40c055d0ffb9b5f3a232cba01c4586de7753e5b1d2ba557a1cf40f158800cc.jpg" title="Aleš Roubíček"></a>
+        
+            <a target="_blank" rel="noopener" href="https://hachyderm.io/@joshbetz"><img src="https://webmention.io/avatar/media.social.lol/16df8943dd92bf632ff1faa040a2a0487277d450e7db59c4fc7fe79b8ee3bcc0.jpg" title="Josh Betz"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@JasonNeel"><img src="https://webmention.io/avatar/media.social.lol/d31d4a09ed1f70684e9e7e9b362e8736e0933772467050f47e20a5767dc9c2bf.jpg" title="Jason Neel"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@gikiski"><img src="https://webmention.io/avatar/media.social.lol/f41d846c5805c5b76108556d5d79ab089a8a4c6cbce00c837fe883f9103e93d4.png" title="Gik :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@gabz"><img src="https://webmention.io/avatar/media.social.lol/48955657d4c26959388aaaaa0b9a31aff934d5e66640db24f78a2fd7a6098a9c.png" title="gabz :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.nu/@marcusosterberg"><img src="https://webmention.io/avatar/media.social.lol/176350b97a2ec9ef8e4366ee2f281934e156d17ffc324a31c0c192745998e44b.jpg" title="Marcus Österberg"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@fromjason"><img src="https://webmention.io/avatar/media.social.lol/75ca9c974d813f538c3fb2827e415b3b60f94ca5321aef069dae3e87a2cdc42c.png" title="Jason"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.heise.de/@hih"><img src="https://webmention.io/avatar/media.social.lol/30233e28c87e4742d2ccf707c8cccb10156e33d5ae5210f8e159e966fef85cab.jpg" title="Hilko Holweg"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@flamed"><img src="https://webmention.io/avatar/media.social.lol/f1269043577361277d2ddb60a4532e13ae807793cbd6d83cb649c41d03945718.jpg" title="fLaMEd"></a>
+        
+            <a target="_blank" rel="noopener" href="https://indieweb.social/@bobmonsour"><img src="https://webmention.io/avatar/media.social.lol/a025aade75434ce785a33d33de24b9661ce1e11f583f3afbf1dd48905d281d6d.png" title="Bob Monsour"></a>
+        
+            <a target="_blank" rel="noopener" href="https://glammr.us/@aronambrosiani"><img src="https://webmention.io/avatar/media.social.lol/92f8dc7fd65359e1ba63b937445593b1c2dfdc43a952a746bf9b0278bdb46c7f.jpg" title="Aron Ambrosiani"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@robb"><img src="https://webmention.io/avatar/media.social.lol/d2b5943b2e687ef31399f8241bd07d88b1140716a89c5e026038eaf8ec5341b7.jpg" title="Robb Knight"></a>
+        
+            <a target="_blank" rel="noopener" href="https://fosstodon.org/@webaware"><img src="https://webmention.io/avatar/media.social.lol/41733c0f680ba1915fc7882a2b90eb76746c9304d7280bf16f00e0e2e9644700.jpg" title="Ross McKay"></a>
+        
+            <a target="_blank" rel="noopener" href="https://tech.lgbt/@yesh"><img src="https://webmention.io/avatar/media.social.lol/de9404c69044d0ba5ee11ebf630bd75f11e1ba48df74b87833c53d258c34cb4a.jpg" title="Yesh"></a>
+        
+            <a target="_blank" rel="noopener" href="https://snabelen.no/@jonstodle"><img src="https://webmention.io/avatar/media.social.lol/060050238f3b053f36e6f3928649673e58e9d93f297a86eb6d356e3cc28ec19b.jpg" title="Jon G Stødle"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@dalereardon"><img src="https://webmention.io/avatar/media.social.lol/a87a3ce0b1fb0f0f9619ee4bba98778d3c017bde21eb6fedf475f0e0e5a7b29a.jpg" title="Dale Reardon"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@coninosleo"><img src="https://webmention.io/avatar/media.social.lol/2202c6630d6ca4055c1d506ea85400172950f118949a2a6bc5155e5a8dbc4233.jpg" title="Constantinos"></a>
+        
+            <a target="_blank" rel="noopener" href="https://octodon.social/@deafferret"><img src="https://webmention.io/avatar/media.social.lol/5cbc3b62bf3801c7305185ec7f1a8c15ca791fe0cb4cce2bfbb1d61dc8477e21.png" title="Jay Hannah"></a>
+        
+            <a target="_blank" rel="noopener" href="https://post.lurk.org/@dsh1705"><img src="https://webmention.io/avatar/media.social.lol/13437cde0061fc381158063f222966fb77aad8e42a04ee97afebc78b166f65ab.png" title="David H."></a>
+        
+            <a target="_blank" rel="noopener" href="https://twit.social/@klept0"><img src="https://webmention.io/avatar/media.social.lol/851f8fd546082e4a233f0ba74a3f3c5d760b207625bbaed22f557f574d7f25a5.jpg" title="klept0"></a>
+        
+            <a target="_blank" rel="noopener" href="https://seocommunity.social/@simoncox"><img src="https://webmention.io/avatar/media.social.lol/215827d4bf47691c7d317982fdc2d14d3c3f43eabd751777bdde75d16c27a971.gif" title="Simon Cox :SEO:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://toot.works/@joe"><img src="https://webmention.io/avatar/media.social.lol/56177dcf18a8541ab9c5fa5104ed60021699a3356a5760e8280f9dc4eb892283.jpg" title="Joe Steinbring :thisisfine:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@raymondcamden"><img src="https://webmention.io/avatar/media.social.lol/c1ddb97091dd0bdc5385c4527b26663b5f999facfe47249e02270a3f48303fbf.jpg" title="Raymond Camden"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@cory"><img src="https://webmention.io/avatar/media.social.lol/f160da467f9547a3cce30e77f4adcdb163b293ad0dc3d7706ac9f3efe9fba2a7.jpg" title="Cory Dransfeldt :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://fosstodon.org/@haraldkliems"><img src="https://webmention.io/avatar/media.social.lol/623c02c564c0a97e462450e636d23733f6830f2a577318cb00263e3ed2a01192.png" title="Harald Kliems"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mstdn.social/@ashleemboyer"><img src="https://webmention.io/avatar/media.social.lol/64720ed925408338ff00b06ba4960d07ba4341d48d393e56dc9b110a8fcab3b1.jpg" title="Ashlee"></a>
+        
+            <a target="_blank" rel="noopener" href="https://sanjuans.life/@mako"><img src="https://webmention.io/avatar/media.social.lol/24ceedb21da49ebd2d4ddd8e719dbd7d5f11fd09a9d9f7697b81220969d0b8d6.jpg" title="mako"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@may"><img src="https://webmention.io/avatar/media.social.lol/0bed636997a51c9228726ee781080608d9955d7ca46b55a43e41b244fe71cc5d.png" title="May :prami:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://soc.jrconlin.com/@jrconlin"><img src="https://webmention.io/avatar/media.social.lol/1f5415453d8199c273887bbc5d9e4ed5ed97f8737d0b5aae45eb3b491f57f078.png" title="jr conlin"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@mhkohne"><img src="https://webmention.io/avatar/media.social.lol/e6ded5764e3bc9a8637a31bf6fa6a83efda2b361fdc7e391efc293ba709c6938.png" title="Michael Kohne"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@laprice"><img src="https://webmention.io/avatar/media.social.lol/f8242d7cc8e82c7c2fdc499a2fb0339d835fda60e04c187e99e1e75a8e0ff778.jpg" title="Accept Uncertainty"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@whiteja"><img src="https://webmention.io/avatar/media.social.lol/acb57e921accdd23cc8255b12bd9cec8312397d771f4e2a71a2be8f9592011bc.jpg" title="JW"></a>
+        
+            <a target="_blank" rel="noopener" href="https://front-end.social/@ashur"><img src="https://webmention.io/avatar/media.social.lol/47f9e3cea1d21932327b192e59a0faf2fb69a491bb0f1df89b0ed69800960171.jpg" title="Ashur Cabrera"></a>
+        
+            <a target="_blank" rel="noopener" href="https://me.dm/@pberry"><img src="https://webmention.io/avatar/media.social.lol/bfe4d12f5df14fbd426f6a5395d4506f6f93d9317f4b9a79641cf9113b3f5ffd.jpg" title="Patrick Berry"></a>
+        
+            <a target="_blank" rel="noopener" href="https://techhub.social/@kwiersma"><img src="https://webmention.io/avatar/media.social.lol/eb3a6a8b3cd7b268d9bca943007be829c03f4460c7785c1ec313da6eba052ce1.jpg" title="Kurt Wiersma"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.lol/@nicolas"><img src="https://webmention.io/avatar/media.social.lol/fdffcd67a931f85b5baff53cc03623ec8c4fbb887e6c7b8af219c88b23f7ef17.png" title="Nicolas Cropp :verified_root:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@Heiji"><img src="https://webmention.io/avatar/media.social.lol/05f0aa75781fa779a112c580a60bf87ece48cf8724b863777ed2f414429524c1.jpg" title="Heiji"></a>
+        
+            <a target="_blank" rel="noopener" href="https://curmudgeon.cafe/@fahrni"><img src="https://webmention.io/avatar/media.social.lol/c8df3dbf748c0b71f1f61dcdbeb70dc9846180f23d1460b2d5f175f2fd977bdf.png" title="Rob Fahrni"></a>
+        
+            <a target="_blank" rel="noopener" href="https://indieweb.social/@andielliott"><img src="https://webmention.io/avatar/media.social.lol/552379ae4b210163b5aa164da10ff4ec7dfa79f86539c1f586d2917287f203ea.jpg" title="Andi"></a>
+        
+            <a target="_blank" rel="noopener" href="https://octodon.social/@deafferret"><img src="https://webmention.io/avatar/media.social.lol/5cbc3b62bf3801c7305185ec7f1a8c15ca791fe0cb4cce2bfbb1d61dc8477e21.png" title="Jay Hannah"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mas.to/@iamdtms"><img src="https://webmention.io/avatar/media.social.lol/4059f4487d3775fbfac9db8eb60725eaf3a9a4939dc3bd60febf56e8569bf49a.png" title="Tamas"></a>
+        
+            <a target="_blank" rel="noopener" href="https://weatherishappening.network/@wordshaper"><img src="https://webmention.io/avatar/media.social.lol/5486b949aee9808685ce3e011c0963dca144905dda84ba823fc321f00b817d22.jpg" title="Dan Sugalski"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.xyz/@gizmomathboy"><img src="https://webmention.io/avatar/media.social.lol/973f63d89bb80f3da4c16e580c754eee5305a50111a5b90d4c9a506395f2b1a3.png" title="gizmomathboy, FC"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.sdf.org/@johannarothman"><img src="https://webmention.io/avatar/media.social.lol/695bd0d9fedf0932007e036eb1445e8b40c3785562b47c04b5735745270c7083.jpg" title="Johanna Rothman"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mstdn.social/@kkarhan"><img src="https://webmention.io/avatar/media.social.lol/91fc91c0b3e848d121def3799feda42789ac12523fda16a737801f5ea905794b.png" title="Kevin Karhan :verified:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://social.sdf.org/@mjgardner"><img src="https://webmention.io/avatar/media.social.lol/7e7f8e821f5c0e9ef8c957b7c68aca0d9cab537277ebcb474988e588ab79a8eb.png" title="Mark Gardner ‍:sdf:"></a>
+        
+            <a target="_blank" rel="noopener" href="https://wikis.world/@pirr"><img src="https://webmention.io/avatar/media.social.lol/e0b5fc90008bb5263611d1e7c662e9924b47ee6f6bc8a5bda296faaeac3253da.png" title="Pirr"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@grork"><img src="https://webmention.io/avatar/media.social.lol/12beb42a82f02d7e518669930fb064c2d0d2d0eba953982eaaa1c4e1aa74d804.jpg" title="Dominic Hopton"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@JamesFaero"><img src="https://webmention.io/avatar/social.lol/db1d635fb4356e493a52ae26f48c9f875d733a757cb82141ea43b0221d79f2d5.png" title="JamesFaero"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@blabaere"><img src="https://webmention.io/avatar/media.social.lol/c6d9301cfedb5452097b30f137a897863f65aa2c54ea11efd3dbbdabb02e2f6e.jpg" title="blabaere☑️"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@jbzfn"><img src="https://webmention.io/avatar/media.social.lol/27a29f8e07158b0e7cc5f493cea5ef01ea9614cb69950f465ebd2a02747cfc3c.png" title="jbz"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@vesan"><img src="https://webmention.io/avatar/media.social.lol/aa31fd9c38efc63d24247ea8f3f8f13979e13fb98266831aee2e4fc5ee63cd30.jpg" title="Vesa Vänskä"></a>
+        
+            <a target="_blank" rel="noopener" href="https://mastodon.social/@ssoriche"><img src="https://webmention.io/avatar/media.social.lol/d1236696b3b73c601bec7be6576f3b36eb87fc787638c00bf30998dfaea464f5.jpg" title="Shawn Sorichetti"></a>
+        
+    </div>
+
+
+
+    <h4>Comments</h4>
+    <div class="webmentions--comments">
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://social.lol/@maique"><img src="https://webmention.io/avatar/media.social.lol/4611ac3983aefe1521bd80b88124559132873e80ea366262c3495bb5c61e3afa.jpg" title="maique :prami:"></a> maique :prami:
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://social.lol/@maique/111363959926484957">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> Just noticed it's missing from mine, and it never bothered me because I do rely on Feedbin figuring out the links when I paste an URL. Will change that!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@Edent"><img src="https://webmention.io/avatar/media.social.lol/01feba97e6f77064005f31709c9f2aaf6f21241d4a1eed26db6bbdd36a238087.jpg" title="Terence Eden"></a> Terence Eden
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@Edent/111364727458582553">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> I love the design of your site!<br />I've tried to add a prominent feed icon and link on mine, but I wonder if I should add it to the masthead as well?</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@splendorr"><img src="https://webmention.io/avatar/media.social.lol/9f84fb5e6d838a8b4ba7b8b28e1a3e96adb327351577141b11454ab4a373f43d.jpg" title="nick splendorr ✨"></a> nick splendorr ✨
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@splendorr/111364789359819068">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> not sure why, but ios can’t reach the server. happy to check again later!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@splendorr"><img src="https://webmention.io/avatar/media.social.lol/9f84fb5e6d838a8b4ba7b8b28e1a3e96adb327351577141b11454ab4a373f43d.jpg" title="nick splendorr ✨"></a> nick splendorr ✨
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@splendorr/111364792099284088">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span></p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb"><img src="https://webmention.io/avatar/media.social.lol/d2b5943b2e687ef31399f8241bd07d88b1140716a89c5e026038eaf8ec5341b7.jpg" title="Robb Knight"></a> Robb Knight
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb/111365007975222039">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://mastodon.social/@splendorr">@<span>splendorr</span></a></span> that’s odd, is it working now?</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://social.lol/@gabz"><img src="https://webmention.io/avatar/media.social.lol/48955657d4c26959388aaaaa0b9a31aff934d5e66640db24f78a2fd7a6098a9c.png" title="gabz :prami:"></a> gabz :prami:
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://social.lol/@gabz/111365096873382355">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@maique">@<span>maique</span></a></span> <span><a href="https://social.lol/@robb">@<span>robb</span></a></span> hm I'm presuming that for MB it could be just as easy as creating a page with the RSS link in it, right?</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://micro.blog/activitypub/jarrod"><img src="https://webmention.io/avatar/media.social.lol/d1cb228a11096b11096019471054e65c99d9982d2f234d152c04e4098d34b1c3.jpg" title="Jarrod Blundy"></a> Jarrod Blundy
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://micro.blog/jarrod/26012119">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/users/gabz">@gabz</a></span> Or as easy as installing <span><a href="https://social.lol/users/robb">@robb</a></span>’s very own <a href="https://micro.blog/account/plugins/view/70">feeds plugin</a>!</p>
+<a href="https://micro.blog/signin?redirect=">Micro.blog</a>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://social.lol/@gabz"><img src="https://webmention.io/avatar/media.social.lol/48955657d4c26959388aaaaa0b9a31aff934d5e66640db24f78a2fd7a6098a9c.png" title="gabz :prami:"></a> gabz :prami:
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://social.lol/@gabz/111365163027422415">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://micro.blog/activitypub/jarrod">@<span>jarrod</span></a></span> <span><a href="https://social.lol/@robb">@<span>robb</span></a></span> ha!! just installed it!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb"><img src="https://webmention.io/avatar/media.social.lol/d2b5943b2e687ef31399f8241bd07d88b1140716a89c5e026038eaf8ec5341b7.jpg" title="Robb Knight"></a> Robb Knight
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb/111365218902111829">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://micro.blog/activitypub/jarrod">@<span>jarrod</span></a></span> <span><a href="https://social.lol/@gabz">@<span>gabz</span></a></span> I forgot I made that ????</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@fromjason"><img src="https://webmention.io/avatar/media.social.lol/75ca9c974d813f538c3fb2827e415b3b60f94ca5321aef069dae3e87a2cdc42c.png" title="Jason"></a> Jason
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@fromjason/111365335930454770">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> good reminder. Added mine to a few more spots thanks!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb"><img src="https://webmention.io/avatar/media.social.lol/d2b5943b2e687ef31399f8241bd07d88b1140716a89c5e026038eaf8ec5341b7.jpg" title="Robb Knight"></a> Robb Knight
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb/111365340139288871">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://mastodon.social/@fromjason">@<span>fromjason</span></a></span> I was just on your website! Nice job you did.</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@fromjason"><img src="https://webmention.io/avatar/media.social.lol/75ca9c974d813f538c3fb2827e415b3b60f94ca5321aef069dae3e87a2cdc42c.png" title="Jason"></a> Jason
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@fromjason/111365355273674213">2023-11-06</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> ahh thanks dude!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.peterjanes.ca/@me"><img src="https://webmention.io/avatar/media.social.lol/af7c0b655169807f6823041712828d9df8aa5af1b01ac2d7f9b9215bf96cd775.png" title="Peter Janes"></a> Peter Janes
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.peterjanes.ca/@me/111366599405098987">2023-11-07</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span><br />...and your Atom feed (application/atom+xml)!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@tdh"><img src="https://webmention.io/avatar/media.social.lol/61d94618f2dc049be18e9bbd609cf51bf9e5e4c79ef77470be1b4da5953c08c8.jpg" title="Thord D. Hedengren"></a> Thord D. Hedengren
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@tdh/111374092974396883">2023-11-08</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> Oh, thanks for the heads-up. I’ll take care of it ASAP.</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@dominickjay"><img src="https://webmention.io/avatar/media.social.lol/5fdeb1a659236e3e82c6b5e51b88857eb1e830bf7520797ecea4bc8fc3349875.png" title="Dom Jay"></a> Dom Jay
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@dominickjay/111404267353229656">2023-11-13</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> amazing, will do. Thanks for the tip, and the add!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@dominickjay"><img src="https://webmention.io/avatar/media.social.lol/5fdeb1a659236e3e82c6b5e51b88857eb1e830bf7520797ecea4bc8fc3349875.png" title="Dom Jay"></a> Dom Jay
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@dominickjay/111409340210674786">2023-11-14</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> All fixed - thanks again!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb"><img src="https://webmention.io/avatar/media.social.lol/d2b5943b2e687ef31399f8241bd07d88b1140716a89c5e026038eaf8ec5341b7.jpg" title="Robb Knight"></a> Robb Knight
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb/111409342121116297">2023-11-14</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://mastodon.social/@dominickjay">@<span>dominickjay</span></a></span> ???? wonderful!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@heyscottyj"><img src="https://webmention.io/avatar/media.social.lol/c93a23a20ed0ff67866e353bac570718835e15902f3f811df855cc5472400305.jpg" title="Scotty Jackson"></a> Scotty Jackson
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@heyscottyj/111427002277358697">2023-11-17</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> That's odd, I thought micro.blog just did that. I see my theme has a bunch of code in it for variables about an RSS link, but I guess one isn't set! Thanks for pointing this out to me!</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@heyscottyj"><img src="https://webmention.io/avatar/media.social.lol/c93a23a20ed0ff67866e353bac570718835e15902f3f811df855cc5472400305.jpg" title="Scotty Jackson"></a> Scotty Jackson
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://mastodon.social/@heyscottyj/111427017943566209">2023-11-17</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> Should be fixed now ????</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://social.hechtinsgefecht.de/@hig"><img src="https://webmention.io/avatar/media.social.lol/1aad6e413638ff949fc5a979837f64cf7ded3c191029165354b8e35050411102.png" title="HECHT INS GEFECHT"></a> HECHT INS GEFECHT
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://social.hechtinsgefecht.de/@hig/111478936907342757">2023-11-26</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> hm, so RSS is still a thing? I would probably go for the wordpress standard url for rss feeds, if there isnt a link ????</p>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://m.cmx.im/@huhexian"><img src="https://webmention.io/avatar/media.social.lol/fac7f6ff6c979af3b840fef5b1a8658c13a5726f9800bc415dffa0db2d0e33f5.jpg" title="Bruce Hu 小胡同学"></a> Bruce Hu 小胡同学
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://m.cmx.im/@huhexian/111479807332333542">2023-11-27</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://social.lol/@robb">@<span>robb</span></a></span> I recommend a browser extension plugin that can help you discover the RSS link of the current website.</p><p><a href="https://github.com/DIYgod/RSSHub-Radar"><span>https://</span><span>github.com/DIYgod/RSSHub-Radar</span><span></span></a></p>
+<a href="https://github.com/DIYgod/RSSHub-Radar">GitHub - DIYgod/RSSHub-Radar: ???? Browser extension that simplifies finding and subscribing RSS and RSSHub</a>
+                </div>
+            </div>
+        
+            <div class="webmentions--comment">
+                <div class="webmentions--comment--header">
+                    <div class="webmentions--comment--header--name">
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb"><img src="https://webmention.io/avatar/media.social.lol/d2b5943b2e687ef31399f8241bd07d88b1140716a89c5e026038eaf8ec5341b7.jpg" title="Robb Knight"></a> Robb Knight
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener" href="https://social.lol/@robb/111481157992150691">2023-11-27</a>
+                    </div>
+                </div>
+                <div class="webmentions--comment--content">
+                    <p><span><a href="https://m.cmx.im/@huhexian">@<span>huhexian</span></a></span> I have one already but thanks</p>
+                </div>
+            </div>
+        
+    </div>
+
+
+</div>
+
+
+		</div>
+
+		<footer style="max-width: 800px;margin: 0 auto;">
+            <div class="box">
+                <p class="footer-links">
+                    
+                         <a href="/contact">Contact</a>
+                    
+                        &bull; <a href="/subscribe">Subscribe</a>
+                    
+                        &bull; <a href="/coffee">Buy me a Coffee</a>
+                    
+                        &bull; <a href="/search">Search</a>
+                    
+                        &bull; <a href="/log/versions">Version History</a>
+                    
+                        &bull; <a href="https://www.robbiepearce.com/softies">Icons by Robbie Pearce</a>
+                    
+                </p>
+            </div>
+            <div class="box copyright">
+                &copy; 1988 - 2023 Robb Knight
+            </div>
+		</footer>
+
+        </div>
+
+    <svg width="0" height="0" style="display: none">
+   <symbol role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="rss">
+      <path fill="currentColor" d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"></path>
+   </symbol>
+   <symbol role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="buymeacoffee">
+      <path fill="currentColor" d="M20.216 6.415l-.132-.666c-.119-.598-.388-1.163-1.001-1.379-.197-.069-.42-.098-.57-.241-.152-.143-.196-.366-.231-.572-.065-.378-.125-.756-.192-1.133-.057-.325-.102-.69-.25-.987-.195-.4-.597-.634-.996-.788a5.723 5.723 0 00-.626-.194c-1-.263-2.05-.36-3.077-.416a25.834 25.834 0 00-3.7.062c-.915.083-1.88.184-2.75.5-.318.116-.646.256-.888.501-.297.302-.393.77-.177 1.146.154.267.415.456.692.58.36.162.737.284 1.123.366 1.075.238 2.189.331 3.287.37 1.218.05 2.437.01 3.65-.118.299-.033.598-.073.896-.119.352-.054.578-.513.474-.834-.124-.383-.457-.531-.834-.473-.466.074-.96.108-1.382.146-1.177.08-2.358.082-3.536.006a22.228 22.228 0 01-1.157-.107c-.086-.01-.18-.025-.258-.036-.243-.036-.484-.08-.724-.13-.111-.027-.111-.185 0-.212h.005c.277-.06.557-.108.838-.147h.002c.131-.009.263-.032.394-.048a25.076 25.076 0 013.426-.12c.674.019 1.347.067 2.017.144l.228.031c.267.04.533.088.798.145.392.085.895.113 1.07.542.055.137.08.288.111.431l.319 1.484a.237.237 0 01-.199.284h-.003c-.037.006-.075.01-.112.015a36.704 36.704 0 01-4.743.295 37.059 37.059 0 01-4.699-.304c-.14-.017-.293-.042-.417-.06-.326-.048-.649-.108-.973-.161-.393-.065-.768-.032-1.123.161-.29.16-.527.404-.675.701-.154.316-.199.66-.267 1-.069.34-.176.707-.135 1.056.087.753.613 1.365 1.37 1.502a39.69 39.69 0 0011.343.376.483.483 0 01.535.53l-.071.697-1.018 9.907c-.041.41-.047.832-.125 1.237-.122.637-.553 1.028-1.182 1.171-.577.131-1.165.2-1.756.205-.656.004-1.31-.025-1.966-.022-.699.004-1.556-.06-2.095-.58-.475-.458-.54-1.174-.605-1.793l-.731-7.013-.322-3.094c-.037-.351-.286-.695-.678-.678-.336.015-.718.3-.678.679l.228 2.185.949 9.112c.147 1.344 1.174 2.068 2.446 2.272.742.12 1.503.144 2.257.156.966.016 1.942.053 2.892-.122 1.408-.258 2.465-1.198 2.616-2.657.34-3.332.683-6.663 1.024-9.995l.215-2.087a.484.484 0 01.39-.426c.402-.078.787-.212 1.074-.518.455-.488.546-1.124.385-1.766zm-1.478.772c-.145.137-.363.201-.578.233-2.416.359-4.866.54-7.308.46-1.748-.06-3.477-.254-5.207-.498-.17-.024-.353-.055-.47-.18-.22-.236-.111-.71-.054-.995.052-.26.152-.609.463-.646.484-.057 1.046.148 1.526.22.577.088 1.156.159 1.737.212 2.48.226 5.002.19 7.472-.14.45-.06.899-.13 1.345-.21.399-.072.84-.206 1.08.206.166.281.188.657.162.974a.544.544 0 01-.169.364zm-6.159 3.9c-.862.37-1.84.788-3.109.788a5.884 5.884 0 01-1.569-.217l.877 9.004c.065.78.717 1.38 1.5 1.38 0 0 1.243.065 1.658.065.447 0 1.786-.065 1.786-.065.783 0 1.434-.6 1.499-1.38l.94-9.95a3.996 3.996 0 00-1.322-.238c-.826 0-1.491.284-2.26.613z"></path>
+   </symbol>
+   <symbol role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="github">
+      <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+   </symbol>
+   <symbol role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="mastodon">
+      <path fill="currentColor" d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"></path>
+   </symbol>
+   <symbol id="prami" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <g transform="matrix(1.886789, 0, 0, -1.886789, -351.413971, 1414.84082)" style="">
+         <g id="g24" transform="matrix(1, 0, 0, 1, 318.75, 511.366486)">
+            <path d="m 0,0 c -20.346,0 -40.691,7.762 -56.215,23.285 l -53,53 c -31.047,31.047 -31.047,81.383 0,112.43 29.997,29.997 78,31.012 109.215,3.044 31.216,27.967 79.219,26.952 109.215,-3.044 31.047,-31.047 31.047,-81.383 0,-112.43 l -53,-53 C 40.692,7.762 20.346,0 0,0" style="fill:#ff69ad;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path26"/>
+         </g>
+         <g id="g28" transform="matrix(1, 0, 0, 1, 303.125, 656.25)">
+            <path d="m 0,0 c 0,-3.452 -2.798,-6.25 -6.25,-6.25 -3.452,0 -6.25,2.798 -6.25,6.25 0,3.452 2.798,6.25 6.25,6.25 C -2.798,6.25 0,3.452 0,0" style="fill:#461036;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path30"/>
+         </g>
+         <g id="g32" transform="matrix(1, 0, 0, 1, 303.125, 656.25)">
+            <path d="m 0,0 c 0,-3.452 -2.798,-6.25 -6.25,-6.25 -3.452,0 -6.25,2.798 -6.25,6.25 0,3.452 2.798,6.25 6.25,6.25 C -2.798,6.25 0,3.452 0,0 Z" style="fill:none;stroke:#461036;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path34"/>
+         </g>
+         <g id="g36" transform="matrix(1, 0, 0, 1, 346.875, 656.25)">
+            <path d="m 0,0 c 0,-3.452 -2.798,-6.25 -6.25,-6.25 -3.452,0 -6.25,2.798 -6.25,6.25 0,3.452 2.798,6.25 6.25,6.25 C -2.798,6.25 0,3.452 0,0" style="fill:#461036;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path38"/>
+         </g>
+         <g id="g40" transform="matrix(1, 0, 0, 1, 346.875, 656.25)">
+            <path d="m 0,0 c 0,-3.452 -2.798,-6.25 -6.25,-6.25 -3.452,0 -6.25,2.798 -6.25,6.25 0,3.452 2.798,6.25 6.25,6.25 C -2.798,6.25 0,3.452 0,0 Z" style="fill:none;stroke:#461036;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path42"/>
+         </g>
+         <g id="g44" transform="matrix(1, 0, 0, 1, 296.88681, 631.243286)">
+            <path d="M 0,0 C 10.004,-16.325 33.722,-16.325 43.726,0" style="fill:none;stroke:#461036;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path46"/>
+         </g>
+         <g id="g48" transform="matrix(1, 0, 0, 1, 418.75, 637.5)">
+            <path d="M 0,0 C 0,17.259 -13.991,31.25 -31.25,31.25 -48.509,31.25 -62.5,17.259 -62.5,0 c 0,-17.259 13.991,-31.25 31.25,-31.25 C -13.991,-31.25 0,-17.259 0,0" style="fill:#e34198;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path50"/>
+         </g>
+         <g id="g52" transform="matrix(1, 0, 0, 1, 281.25, 637.5)">
+            <path d="M 0,0 C 0,17.259 -13.991,31.25 -31.25,31.25 -48.509,31.25 -62.5,17.259 -62.5,0 c 0,-17.259 13.991,-31.25 31.25,-31.25 C -13.991,-31.25 0,-17.259 0,0" style="fill:#e34198;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path54"/>
+         </g>
+         <g id="g56" transform="matrix(1, 0, 0, 1, 296.88681, 631.243286)">
+            <path d="M 0,0 C 10.004,-16.325 33.722,-16.325 43.726,0" style="fill:none;stroke:#461036;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path58"/>
+         </g>
+      </g>
+   </symbol>
+   <symbol xmlnsDc="http://purl.org/dc/elements/1.1/" xmlnsCc="http://web.resource.org/cc/" xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlnsSvg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape" version="1.0" id="psn" overflow="visible" enable-background="new 0 0 612.092 560.54" xml:space="preserve" sodipodiVersion="0.32" inkscapeVersion="0.44.1" sodipodiDocname="Playstation logo colour.svg" sodipodiDocbase="C:\Documents and Settings\Sigurd\Mine dokumenter\Mine bilder" viewBox="0 0 612.092 560.54">
+      <metadata id="metadata20">
+         <rdf:RDF>
+            <cc:Work rdfAbout="">
+               <dc:format>image/svg+xml</dc:format>
+               <dc:type rdfResource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+            </cc:Work>
+         </rdf:RDF>
+      </metadata>
+      <defs id="defs18"></defs>
+      <sodipodi:namedview inkscapeWindowHeight="719" inkscapeWindowWidth="1024" inkscapePageshadow="2" inkscapePageopacity="0.0" guidetolerance="10.0" gridtolerance="10.0" objecttolerance="10.0" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" id="base" inkscapeZoom="1.9023033" inkscapeCx="145.65542" inkscapeCy="98.001689" inkscapeWindowX="-4" inkscapeWindowY="-4" inkscapeCurrentLayer="g3"></sodipodi:namedview>
+      <g id="g3" transform="translate(-61.68556,-312.8684)">
+         <path fill="#de0029" clip-rule="evenodd" d="M 395.06807,434.21345 L 394.60021,863.39514 L 279.61012,825.99696 L 279.61012,321.53515 L 426.38841,360.34125 C 520.34231,385.59251 577.83949,434.67697 576.90381,520.70189 C 575.96956,620.75529 529.69221,660.95773 439.47538,634.77658 L 439.47538,437.47977 C 439.47538,413.635 395.06807,412.23866 395.06807,434.21345 L 395.06807,434.21345 z " id="path7"></path>
+         <path fill="#f3c202" clip-rule="evenodd" d="M 226.78568,742.76757 L 172.56056,761.00535 C 137.49733,773.16387 107.58489,744.64627 139.83807,732.95128 L 166.01346,723.60717 L 67.381005,692.27665 C 36.994899,702.56663 8.4787729,724.53999 10.3531,755.3983 C 12.223081,786.7187 83.74009,794.20296 138.90381,803.08643 C 190.32031,811.49773 237.06553,806.82349 279.60869,791.86223 L 279.60869,759.60031 L 226.78568,742.76757 L 226.78568,742.76757 z M 395.53446,863.39514 L 496.03688,828.32754 L 394.60021,796.07291 L 394.60021,861.05298 L 395.53446,863.39514 L 395.53446,863.39514 z " id="path9"></path>
+         <path fill="#326db3" clip-rule="evenodd" d="M 662.91715,769.42531 L 664.78565,768.95457 C 708.72663,753.53123 727.42501,732.01703 722.75363,711.92089 C 715.27373,678.26121 661.51646,660.02348 578.77524,653.9442 C 519.41092,649.73926 460.98092,662.82627 403.95154,682.46035 L 394.60164,685.73681 L 496.97405,717.52794 L 556.80624,697.42166 C 619.44554,685.73681 644.69244,706.30513 584.38808,725.47573 L 554.46981,735.75553 L 662.91715,769.42531 L 662.91715,769.42531 z M 279.61012,620.75529 L 234.26272,636.17869 L 279.61012,650.2057 L 279.61012,620.75529 L 279.61012,620.75529 z " id="path11"></path>
+         <path fill="00aa9e" clip-rule="evenodd" d="M 496.03688,828.32754 L 662.91715,769.42531 L 554.46695,735.75553 L 394.60021,790.45575 L 394.60021,796.07291 L 496.03688,828.32754 L 496.03688,828.32754 z M 279.61012,725.00349 L 226.78712,742.76906 L 279.61012,759.60031 L 279.61012,725.00349 L 279.61012,725.00349 z M 394.60021,752.5955 L 394.60021,685.73681 L 496.97262,717.52794 L 394.60021,752.5955 L 394.60021,752.5955 z M 166.01492,723.60717 L 279.60869,682.93251 L 279.60869,650.2057 L 234.26272,636.17869 L 69.718853,691.81461 C 69.250983,691.81461 68.316721,692.27665 67.38246,692.27665 L 166.01492,723.60717 L 166.01492,723.60717 z " id="path13"></path>
+      </g>
+   </symbol>
+   <symbol role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="lastfm">
+      <path fill="currentColor" d="M10.584 17.21l-.88-2.392s-1.43 1.594-3.573 1.594c-1.897 0-3.244-1.649-3.244-4.288 0-3.382 1.704-4.591 3.381-4.591 2.42 0 3.189 1.567 3.849 3.574l.88 2.749c.88 2.666 2.529 4.81 7.285 4.81 3.409 0 5.718-1.044 5.718-3.793 0-2.227-1.265-3.381-3.63-3.931l-1.758-.385c-1.21-.275-1.567-.77-1.567-1.595 0-.934.742-1.484 1.952-1.484 1.32 0 2.034.495 2.144 1.677l2.749-.33c-.22-2.474-1.924-3.492-4.729-3.492-2.474 0-4.893.935-4.893 3.932 0 1.87.907 3.051 3.189 3.601l1.87.44c1.402.33 1.869.907 1.869 1.704 0 1.017-.99 1.43-2.86 1.43-2.776 0-3.93-1.457-4.59-3.464l-.907-2.75c-1.155-3.573-2.997-4.893-6.653-4.893C2.144 5.333 0 7.89 0 12.233c0 4.18 2.144 6.434 5.993 6.434 3.106 0 4.591-1.457 4.591-1.457z"></path>
+   </symbol>
+   <symbol role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="applemusic">
+      <path fill="currentColor" d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"></path>
+   </symbol>
+   <symbol role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="letterboxd">
+      <path fill="currentColor" d="M8.29 16.752V7.2H6.546V4.8h6.328v2.4h-1.746v9.574h3.925v-2.618h2.839V19.2H6.545v-2.448h1.746zM0 12c0 6.628 5.372 12 12 12s12-5.372 12-12S18.628 0 12 0 0 5.372 0 12z"></path>
+   </symbol>
+   <symbol viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" id="oku">
+      <path d="M500 183.794v64.23c-57.312 0-112.648 22.727-153.162 62.253-32.609 32.608-54.348 73.122-61.265 117.589H500v65.217H0v-65.217h215.415c-6.917-44.467-28.656-85.969-61.265-118.577C113.636 269.763 58.3 247.036 0 247.036v-65.218c51.383 0 102.767 13.834 146.245 40.514 44.466 25.692 80.04 63.241 104.743 108.696 23.716-44.467 59.289-82.016 103.755-107.708 43.478-26.68 93.874-39.526 145.257-39.526ZM169.96 85.968c0-43.478 35.574-79.051 80.04-79.051 44.466 0 80.04 35.573 80.04 79.051 0 43.479-35.574 78.064-80.04 78.064-44.466 0-80.04-34.585-80.04-78.064Zm0 0"></path>
+   </symbol>
+   <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="ticket">
+      <desc>Created with Sketch.</desc>
+      <defs></defs>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+         <g id="Artboard-4" transform="translate(-708.000000, -511.000000)">
+            <g id="196" transform="translate(708.000000, 511.000000)">
+               <path d="M14.2675644,19 L2.991155,19 C1.89147046,19 1,18.1029399 1,16.9941413 L1,13.7324356 C1.59780137,13.3866262 2,12.7402824 2,12 C2,11.2597176 1.59780137,10.6133738 1,10.2675644 L1,7.00585866 C1,5.89805351 1.88967395,5 2.991155,5 L14.2675644,5 C14.6133738,5.59780137 15.2597176,6 16,6 C16.7402824,6 17.3866262,5.59780137 17.7324356,5 L21.008845,5 C22.1085295,5 23,5.89706013 23,7.00585866 L23,10.2675644 C22.4021986,10.6133738 22,11.2597176 22,12 C22,12.7402824 22.4021986,13.3866262 23,13.7324356 L23,16.9941413 C23,18.1019465 22.1103261,19 21.008845,19 L17.7324356,19 C17.3866262,18.4021986 16.7402824,18 16,18 C15.2597176,18 14.6133738,18.4021986 14.2675644,19 Z" id="Combined-Shape" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+               <rect id="Rectangle" fill="currentColor" x="15" y="6" width="2" height="3" rx="1"></rect>
+               <rect id="Rectangle" fill="currentColor" x="15" y="10" width="2" height="4" rx="1"></rect>
+               <rect id="Rectangle" fill="currentColor" x="15" y="15" width="2" height="3" rx="1"></rect>
+               <rect id="Rectangle-133" fill="currentColor" opacity="0.5" x="4" y="8" width="8" height="2" rx="1"></rect>
+               <rect id="Rectangle-133" fill="currentColor" opacity="0.5" x="4" y="11" width="4" height="2" rx="1"></rect>
+               <rect id="Rectangle-133" fill="currentColor" opacity="0.200000003" x="4" y="15" width="9" height="1" rx="0.5"></rect>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="polaroids">
+      <desc>Created with Sketch.</desc>
+      <defs></defs>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+         <g id="Artboard-4" transform="translate(-884.000000, -379.000000)">
+            <g id="140" transform="translate(884.000000, 379.000000)">
+               <g id="2" transform="translate(0.068124, 1.974212)" fill="currentColor">
+                  <path d="M3.93187648,2.60283088 L2.09644494,3.09350651 L3.93187648,9.94343026 L3.93187648,17.4076278 L0.230395558,3.59351294 C-0.0541723055,2.53149121 0.577347276,1.43952472 1.64224814,1.15418539 L3.93187648,0.540681329 L3.93187648,2.60283088 Z" id="Combined-Shape"></path>
+               </g>
+               <g id="1" transform="translate(6.000000, 2.000000)">
+                  <path d="M0,1.99079514 C0,0.891309342 0.892622799,0 1.99508929,0 L16.0049107,0 C17.1067681,0 18,0.898212381 18,1.99079514 L18,18.0092049 C18,19.1086907 17.1073772,20 16.0049107,20 L1.99508929,20 C0.893231902,20 0,19.1017876 0,18.0092049 L0,1.99079514 Z M2,2 L2,16 L16,16 L16,2 L2,2 Z" id="Combined-Shape" fill="currentColor"></path>
+                  <circle id="Oval-39" fill="currentColor" cx="6" cy="6" r="2"></circle>
+                  <path d="M15,8 C14,8 12.5,8.5 11,10 C9.5,11.5 9,14 9,15" id="Path-54" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                  <path d="M4,15 C4,14 4.5,12 7,11 C9.5,10 11,10.5 11,10.5" id="Path-55" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+               </g>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="pen">
+      <desc>Created with Sketch.</desc>
+      <defs></defs>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+         <g id="Artboard-4" transform="translate(-532.000000, -687.000000)" stroke="currentColor" stroke-width="2">
+            <g id="272" transform="translate(531.000000, 687.000000)">
+               <g id="pen-tool" transform="translate(12.474344, 12.574381) rotate(-315.000000) translate(-12.474344, -12.574381) translate(5.474344, 2.074381)">
+                  <path d="M7,22.5 C7,22.5 12,11 13,10 C12,9 10,3 10,3 L4,3 C4,3 2,9 1,10 C2,11 7,22.5 7,22.5 Z" id="Path-208" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <rect id="Rectangle-194" stroke-linecap="round" stroke-linejoin="round" x="3" y="0" width="8" height="3"></rect>
+                  <path d="M7,21 L7,10" id="Path-209"></path>
+                  <circle id="Oval-150" cx="7" cy="10" r="1"></circle>
+               </g>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="chat">
+      <defs></defs>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+         <g id="Artboard-4" transform="translate(-664.000000, -115.000000)">
+            <g id="15" transform="translate(664.000000, 115.000000)">
+               <path d="M5.58578644,18 L8.29289322,20.7071068 L9,21.4142136 L9.70710678,20.7071068 L12.4142136,18 L20.0024554,18 C21.1070219,18 22,17.1024207 22,15.9975267 L22,6.00247329 C22,4.90415942 21.1082892,4 20.0066023,4 L3.99339768,4 C2.89058031,4 2,4.89859975 2,6.00247329 L2,15.9975267 C2,17.0970743 2.89547708,18 3.99895656,18 L5.58578644,18 Z" id="Rectangle-406" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+               <rect id="Rectangle-407" fill="currentColor" x="6" y="8" width="12" height="2" rx="1"></rect>
+               <rect id="Rectangle-407" fill="currentColor" x="6" y="12" width="12" height="2" rx="1"></rect>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="terminal">
+      <desc>Created with Sketch.</desc>
+      <defs></defs>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+         <g id="Artboard-4" transform="translate(-752.000000, -379.000000)">
+            <g id="136" transform="translate(752.000000, 379.000000)">
+               <rect id="Rectangle-87" stroke="currentColor" stroke-width="2" x="2" y="4" width="20" height="16" rx="2"></rect>
+               <polyline id="Path-63" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="6 8 8 10 6 12"></polyline>
+               <rect id="Rectangle-88" fill="currentColor" x="10" y="11" width="6" height="2" rx="1"></rect>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="ipod">
+      <desc>Created with Sketch.</desc>
+      <defs></defs>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+         <g id="Artboard-4" transform="translate(-136.000000, -291.000000)" stroke="#333333">
+            <g id="83" transform="translate(136.000000, 291.000000)">
+               <rect id="Rectangle-410" stroke-width="2" stroke-linejoin="round" x="5" y="2" width="14" height="20" rx="1"></rect>
+               <rect id="Rectangle-412" opacity="0.5" x="7.5" y="4.5" width="9" height="6" rx="1"></rect>
+               <circle id="Oval-31" stroke-width="2" cx="12" cy="16" r="3"></circle>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" id="maccy">
+      <defs/>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+         <g id="Artboard-4" transform="translate(-576.000000, -291.000000)">
+            <g id="93" transform="translate(576.000000, 291.000000)">
+               <rect id="Rectangle-29" stroke="#333333" stroke-width="2" x="4" y="1" width="16" height="19" rx="1"/>
+               <path d="M5,20 L19,20 L19,22.0010434 C19,22.5527519 18.5500512,23 17.9931545,23 L6.00684547,23 C5.45078007,23 5,22.5573397 5,22.0010434 L5,20 Z" id="Rectangle-30" stroke="#333333" stroke-width="2"/>
+               <path d="M7,3.5 L6.5,3.5 L6.5,4 L6.5,12 L6.5,12.5 L7,12.5 L12,12.5 L17,12.5 L17.5,12.5 L17.5,12 L17.5,4 L17.5,3.5 L17,3.5 L7,3.5 Z" id="Rectangle-31" stroke="#333333" stroke-linejoin="round"/>
+               <rect id="Combined-Shape" fill="#333333" x="13" y="15" width="4" height="1"/>
+               <rect id="Rectangle-34" fill="#333333" x="6" y="16" width="2" height="1"/>
+               <path d="M9,5 L10,5 L10,7 L9,7 L9,5 Z M11,8 L12,8 L12,9 L11,9 L11,8 Z M12,5 L13,5 L13,9 L12,9 L12,5 Z M9,9 L10,9 L10,10 L9,10 L9,9 Z M10,10 L14,10 L14,11 L10,11 L10,10 Z M14,9 L15,9 L15,10 L14,10 L14,9 Z M14,5 L15,5 L15,7 L14,7 L14,5 Z" id="Combined-Shape" fill="#333333" opacity="0.5"/>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" id="iphone">
+      <defs/>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+         <g id="Artboard-4" transform="translate(-796.000000, -115.000000)">
+            <g id="18" transform="translate(796.000000, 115.000000)">
+               <rect id="Rectangle-410" stroke="#333333" stroke-width="2" stroke-linejoin="round" x="6" y="2" width="12" height="20" rx="1"/>
+               <rect id="Rectangle-412" fill="#333333" x="10" y="4" width="4" height="1" rx="0.5"/>
+               <circle id="Oval-31" fill="#333333" cx="12" cy="19" r="1"/>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" id="macmini">
+      <defs/>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+         <g id="Artboard-4" transform="translate(-532.000000, -115.000000)" stroke-width="2" stroke="#333333">
+            <g id="12" transform="translate(532.000000, 115.000000)">
+               <polygon id="Triangle-1" points="5 21 5 3 21 12"/>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" id="home">
+      <defs/>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+         <g id="Artboard-4" transform="translate(-620.000000, -159.000000)" stroke="#333333" stroke-width="2">
+            <g id="34" transform="translate(620.000000, 159.000000)">
+               <path d="M1,11 L12,2 C12,2 22.9999989,11.0000005 23,11" id="Path-50"/>
+               <path d="M3,10 C3,10 3,10.4453982 3,10.9968336 L3,20.0170446 C3,20.5675806 3.43788135,21.0138782 4.00292933,21.0138781 L8.99707067,21.0138779 C9.55097324,21.0138779 10,20.5751284 10,20.0089602 L10,15.0049177 C10,14.449917 10.4433532,14 11.0093689,14 L12.9906311,14 C13.5480902,14 14,14.4387495 14,15.0049177 L14,20.0089602 C14,20.5639609 14.4378817,21.0138779 15.0029302,21.0138779 L19.9970758,21.0138781 C20.5509789,21.0138782 21.000006,20.56848 21.000006,20.0170446 L21.0000057,10" id="Path-51"/>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" id="heart">
+      <defs/>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+         <g id="Artboard-4" transform="translate(-48.000000, -115.000000)" stroke="#333333" stroke-width="2" fill-rule="nonzero">
+            <g id="1" transform="translate(48.000000, 115.000000)">
+               <path d="M12.0174466,21 L20.9041801,11.3556763 C22.6291961,9.13778099 22.2795957,5.90145416 20.1233257,4.12713796 C17.9670557,2.35282175 14.8206518,2.71241362 13.0956358,4.93030888 L12.0174465,6.5 L10.9043642,4.93030888 C9.17934824,2.71241362 6.0329443,2.35282175 3.87667432,4.12713796 C1.72040435,5.90145416 1.37080391,9.13778099 3.09581989,11.3556763 L12.0174466,21 Z" id="Path-2"/>
+            </g>
+         </g>
+      </g>
+   </symbol>
+   <symbol role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="lemmy">
+      <path fill="currentColor" d="M2.9595 4.2228a3.9132 3.9132 0 0 0-.332.019c-.8781.1012-1.67.5699-2.155 1.3862-.475.8-.5922 1.6809-.35 2.4971.2421.8162.8297 1.5575 1.6982 2.1449.0053.0035.0106.0076.0163.0114.746.4498 1.492.7431 2.2877.8994-.02.3318-.0272.6689-.006 1.0181.0634 1.0432.4368 2.0006.996 2.8492l-2.0061.8189a.4163.4163 0 0 0-.2276.2239.416.416 0 0 0 .0879.455.415.415 0 0 0 .2941.1231.4156.4156 0 0 0 .1595-.0312l2.2093-.9035c.408.4859.8695.9315 1.3723 1.318.0196.0151.0407.0264.0603.0423l-1.2918 1.7103a.416.416 0 0 0 .664.501l1.314-1.7385c.7185.4548 1.4782.7927 2.2294 1.0242.3833.7209 1.1379 1.1871 2.0202 1.1871.8907 0 1.6442-.501 2.0242-1.2072.744-.2347 1.4959-.5729 2.2073-1.0262l1.332 1.7606a.4157.4157 0 0 0 .7439-.1936.4165.4165 0 0 0-.0799-.3074l-1.3099-1.7345c.0083-.0075.0178-.0113.0261-.0188.4968-.3803.9549-.8175 1.3622-1.2939l2.155.8794a.4156.4156 0 0 0 .5412-.2276.4151.4151 0 0 0-.2273-.5432l-1.9438-.7928c.577-.8538.9697-1.8183 1.0504-2.8693.0268-.3507.0242-.6914.0079-1.0262.7905-.1572 1.5321-.4502 2.2737-.8974.0053-.0033.011-.0076.0163-.0113.8684-.5874 1.456-1.3287 1.6982-2.145.2421-.8161.125-1.697-.3501-2.497-.4849-.8163-1.2768-1.2852-2.155-1.3863a3.2175 3.2175 0 0 0-.332-.0189c-.7852-.0151-1.6231.229-2.4286.6942-.5926.342-1.1252.867-1.5433 1.4387-1.1699-.6703-2.6923-1.0476-4.5635-1.0785a15.5768 15.5768 0 0 0-.5111 0c-2.085.034-3.7537.43-5.0142 1.1449-.0033-.0038-.0045-.0114-.008-.0152-.4233-.5916-.973-1.1365-1.5835-1.489-.8055-.465-1.6434-.7083-2.4286-.6941Zm.2858.7365c.5568.042 1.1696.2358 1.7787.5875.485.28.9757.7554 1.346 1.2696a5.6875 5.6875 0 0 0-.4969.4085c-.9201.8516-1.4615 1.9597-1.668 3.2335-.6809-.1402-1.3183-.3945-1.984-.7948-.7553-.5128-1.2159-1.1225-1.4004-1.7445-.1851-.624-.1074-1.2712.2776-1.9196.3743-.63.9275-.9534 1.6118-1.0322a2.796 2.796 0 0 1 .5352-.0076Zm17.5094 0a2.797 2.797 0 0 1 .5353.0075c.6842.0786 1.2374.4021 1.6117 1.0322.385.6484.4627 1.2957.2776 1.9196-.1845.622-.645 1.2317-1.4004 1.7445-.6578.3955-1.2881.6472-1.9598.7888-.1942-1.2968-.7375-2.4338-1.666-3.302a5.5639 5.5639 0 0 0-.4709-.3923c.3645-.49.8287-.9428 1.2938-1.2113.6091-.3515 1.2219-.5454 1.7787-.5875ZM12.006 6.0036a14.832 14.832 0 0 1 .487 0c2.3901.0393 4.0848.67 5.1631 1.678 1.1501 1.0754 1.6423 2.6006 1.499 4.467-.1311 1.7079-1.2203 3.2281-2.652 4.324-.694.5313-1.4626.9354-2.2254 1.2294.0031-.0453.014-.0888.014-.1349.0029-1.1964-.9313-2.2133-2.2918-2.2133-1.3606 0-2.3222 1.0154-2.2918 2.2213.0013.0507.014.0972.0181.1471-.781-.2933-1.5696-.7013-2.2777-1.2456-1.4239-1.0945-2.4997-2.6129-2.6037-4.322-.1129-1.8567.3778-3.3382 1.5212-4.3965C7.5094 6.7 9.352 6.047 12.006 6.0036Zm-3.6419 6.8291c-.6053 0-1.0966.4903-1.0966 1.0966 0 .6063.4913 1.0986 1.0966 1.0986s1.0966-.4923 1.0966-1.0986c0-.6063-.4913-1.0966-1.0966-1.0966zm7.2819.0113c-.5998 0-1.0866.4859-1.0866 1.0866s.4868 1.0885 1.0866 1.0885c.5997 0 1.0865-.4878 1.0865-1.0885s-.4868-1.0866-1.0865-1.0866zM12 16.0835c1.0237 0 1.5654.638 1.5634 1.4829-.0018.7849-.6723 1.485-1.5634 1.485-.9167 0-1.54-.5629-1.5634-1.493-.0212-.8347.5397-1.4749 1.5634-1.4749Z"></path>
+   </symbol>
+</svg>
+
+	</body>
+</html>

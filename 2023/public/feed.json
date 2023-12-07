@@ -1,0 +1,805 @@
+
+{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "Robb Knight",
+    "home_page_url": "https://rknight.me/",
+    "feed_url": "https://rknight.me/feed.json",
+    "items" : [
+    {
+        "id" : "/please-expose-your-rss/index.html",
+        "title": "Please, Expose your RSS",
+        "url": "https://rknight.me/please-expose-your-rss/",
+        "content_text": "I noticed a lot of people don&#39;t expose their RSS feeds",
+        "date_published": "2023-11-06T13:11:20.440Z"
+    },
+    {
+        "id" : "/app-defaults/index.html",
+        "title": "App Defaults",
+        "url": "https://rknight.me/app-defaults/",
+        "content_text": "All of the apps I use as per the categories from Hemispheric Views 097",
+        "date_published": "2023-11-03T17:31:10.949Z"
+    },
+    {
+        "id" : "/st-jude-2023-final-numbers/index.html",
+        "title": "St Jude 2023",
+        "url": "https://rknight.me/st-jude-2023-final-numbers/",
+        "content_text": "A look at how much we raised and the japes that occured",
+        "date_published": "2023-10-07T06:19:47.956Z"
+    },
+    {
+        "id" : "/add-full-screen-artwork-to-your-podcast/index.html",
+        "title": "Add Full Screen Artwork to Your Podcast",
+        "url": "https://rknight.me/add-full-screen-artwork-to-your-podcast/",
+        "content_text": "How (not) to add full screen artwork to the Apple Podcasts app for your podcast",
+        "date_published": "2023-09-22T12:18:12.741Z"
+    },
+    {
+        "id" : "/im-not-building-a-podcast-host/index.html",
+        "title": "I&#39;m (Not) Building a Podcast Host",
+        "url": "https://rknight.me/im-not-building-a-podcast-host/",
+        "content_text": "Why I considered building a podcast host until I did the maths on the costs",
+        "date_published": "2023-09-20T11:32:33.057Z"
+    },
+    {
+        "id" : "/st-jude-2023/index.html",
+        "title": "Fundraising for St Jude",
+        "url": "https://rknight.me/st-jude-2023/",
+        "content_text": "I&#39;m fundraising for St Jude this September as part of Relay&#39;s campaign",
+        "date_published": "2023-08-28T15:28:07.162Z"
+    },
+    {
+        "id" : "/its-better-in-the-app-and-other-lies/index.html",
+        "title": "It’s Better in the App and Other Lies",
+        "url": "https://rknight.me/its-better-in-the-app-and-other-lies/",
+        "content_text": "Some thoughts on why there are so many apps when when in a lot of cases a good old website will do",
+        "date_published": "2023-08-22T10:00:00.608Z"
+    },
+    {
+        "id" : "/just-delete-me-ten-years-later/index.html",
+        "title": "Just Delete Me: Ten Years Later",
+        "url": "https://rknight.me/just-delete-me-ten-years-later/",
+        "content_text": "Ten years ago we launched JustDelete.me",
+        "date_published": "2023-08-18T12:44:06.279Z"
+    },
+    {
+        "id" : "/compiling-css-with-eleventy/index.html",
+        "title": "Compiling CSS with Eleventy",
+        "url": "https://rknight.me/compiling-css-with-eleventy/",
+        "content_text": "A list of different options for compiling CSS with Eleventy",
+        "date_published": "2023-08-16T12:30:35.115Z"
+    },
+    {
+        "id" : "/block-chatgpt-with-robotstxt/index.html",
+        "title": "Block ChatGPT and other AI Bots with robots.txt",
+        "url": "https://rknight.me/block-chatgpt-with-robotstxt/",
+        "content_text": "How to block ChatGPT from crawling your site with a robots.txt file",
+        "date_published": "2023-08-12T09:12:43.328Z"
+    },
+    {
+        "id" : "/three-years-of-hemispheric-views-feedback/index.html",
+        "title": "Three Years of Hemispheric Views Feedback",
+        "url": "https://rknight.me/three-years-of-hemispheric-views-feedback/",
+        "content_text": "I listened to ~70 hours of Hemispheric Views and wrote down all my feedback",
+        "date_published": "2023-08-01T12:00:01.145Z"
+    },
+    {
+        "id" : "/fix-for-low-volume-exported-audio-in-garageband/index.html",
+        "title": "Fix for Low Volume Exported Audio in GarageBand",
+        "url": "https://rknight.me/fix-for-low-volume-exported-audio-in-garageband/",
+        "content_text": "My exports for my new podcast were really quiet compared to other podcasts. Turns out GarageBand has a setting causing this",
+        "date_published": "2023-07-10T08:28:42.770Z"
+    },
+    {
+        "id" : "/a-threads-thread-blog-post/index.html",
+        "title": "A Threads Thread Blog Post",
+        "url": "https://rknight.me/a-threads-thread-blog-post/",
+        "content_text": "A thread about Threads that turned in a blog post about Threads",
+        "date_published": "2023-07-06T08:05:16.652Z"
+    },
+    {
+        "id" : "/custom-sidebar-icons-in-finder/index.html",
+        "title": "Custom Sidebar Icons in Finder",
+        "url": "https://rknight.me/custom-sidebar-icons-in-finder/",
+        "content_text": "Setting custom sidebar icons for folders in MacOS. Managed to get this working with a lot of trial and error",
+        "date_published": "2023-06-29T16:28:34.602Z"
+    },
+    {
+        "id" : "/building-an-activitypub-server/index.html",
+        "title": "Building an ActivityPub Server",
+        "url": "https://rknight.me/building-an-activitypub-server/",
+        "content_text": "I built Bugle, an ActivityPub server with Laravel and PHP. These are my notes on how it all works to the best of my understanding",
+        "date_published": "2023-06-28T05:48:41.588Z"
+    },
+    {
+        "id" : "/biology-of-hey-bear-fruits/index.html",
+        "title": "The Biology of the Hey Bear Fruits Makes No Sense",
+        "url": "https://rknight.me/biology-of-hey-bear-fruits/",
+        "content_text": "I&#39;ve watched too much Hey Bear and wrote about how weird it is",
+        "date_published": "2023-06-22T17:44:51.466Z"
+    },
+    {
+        "id" : "/asset-lifespan-spreadsheet/index.html",
+        "title": "Asset Lifespan Spreadsheet",
+        "url": "https://rknight.me/asset-lifespan-spreadsheet/",
+        "content_text": "",
+        "date_published": "2023-06-02T16:22:40.119Z"
+    },
+    {
+        "id" : "/brian-butterfield-diet-soundboard/index.html",
+        "title": "Brian Butterfield Diet Soundboard",
+        "url": "https://rknight.me/brian-butterfield-diet-soundboard/",
+        "content_text": "A soundboard for the Brian Butterfield Diet",
+        "date_published": "2023-05-22T14:27:43.112Z"
+    },
+    {
+        "id" : "/one-year-of-pizza-making/index.html",
+        "title": "One Year of Pizza Making",
+        "url": "https://rknight.me/one-year-of-pizza-making/",
+        "content_text": "Things I&#39;ve learnt in a year or so of making pizza",
+        "date_published": "2023-05-03T12:24:32.372Z"
+    },
+    {
+        "id" : "/the-knightpool/index.html",
+        "title": "The Knightpool",
+        "url": "https://rknight.me/the-knightpool/",
+        "content_text": "The list of baby name guesses in the Knightpool",
+        "date_published": "2023-03-09T10:02:00.753Z"
+    },
+    {
+        "id" : "/food-graveyard/index.html",
+        "title": "Food Graveyard",
+        "url": "https://rknight.me/food-graveyard/",
+        "content_text": "Discontinued food that I want back",
+        "date_published": "2023-02-24T22:54:57.098Z"
+    },
+    {
+        "id" : "/no-more-ratings/index.html",
+        "title": "No More Ratings",
+        "url": "https://rknight.me/no-more-ratings/",
+        "content_text": "Why I&#39;m not rating movies any more",
+        "date_published": "2023-02-14T09:52:15.619Z"
+    },
+    {
+        "id" : "/add-to-musicthread-shortcut/index.html",
+        "title": "Add to MusicThread Shortcut",
+        "url": "https://rknight.me/add-to-musicthread-shortcut/",
+        "content_text": "A shortcut to add new tracks or albums to MusicThread",
+        "date_published": "2023-02-06T18:04:43.513Z"
+    },
+    {
+        "id" : "/note-on-migrating-wordpress-site-eleventy/index.html",
+        "title": "Notes on Migrating a Wordpress Site to Eleventy",
+        "url": "https://rknight.me/note-on-migrating-wordpress-site-eleventy/",
+        "content_text": "Some helpful notes and tools for migrating an existing Wordpress site to Eleventy",
+        "date_published": "2023-01-31T22:13:16.196Z"
+    },
+    {
+        "id" : "/additional-webmention-resources/index.html",
+        "title": "Additional Webmention Resources",
+        "url": "https://rknight.me/additional-webmention-resources/",
+        "content_text": "Some more links and tools related to webmentions",
+        "date_published": "2023-01-31T00:00:00.000Z"
+    },
+    {
+        "id" : "/adding-webmentions-to-your-site/index.html",
+        "title": "Adding Webmentions to Your Site",
+        "url": "https://rknight.me/adding-webmentions-to-your-site/",
+        "content_text": "Some notes on what webmentions are and how I implemented them for this site",
+        "date_published": "2023-01-30T00:00:00.000Z"
+    },
+    {
+        "id" : "/twitter-backup-and-archiving-options/index.html",
+        "title": "Twitter Backup and Archiving Options",
+        "url": "https://rknight.me/twitter-backup-and-archiving-options/",
+        "content_text": "Three different options for managing your Twitter archive",
+        "date_published": "2023-01-29T00:00:00.000Z"
+    },
+    {
+        "id" : "/letters/index.html",
+        "title": "Letters: January 2023",
+        "url": "https://rknight.me/letters/",
+        "content_text": "An idea by Jason Becker involving Jason and myself writing an email to each other every week for a month",
+        "date_published": "2023-01-28T00:00:00.000Z"
+    },
+    {
+        "id" : "/get-mastodon-account-id-from-username/index.html",
+        "title": "Get Mastodon Account ID from Username",
+        "url": "https://rknight.me/get-mastodon-account-id-from-username/",
+        "content_text": "The Mastodon API requires the account ID for making API requests",
+        "date_published": "2023-01-27T00:00:00.000Z"
+    },
+    {
+        "id" : "/im-done-with-closed-services/index.html",
+        "title": "Everything Should Have an API: I&#39;m Done with Closed Services",
+        "url": "https://rknight.me/im-done-with-closed-services/",
+        "content_text": "I&#39;m no longer willing to use services that don&#39;t allow me to access my data via an API or RSS",
+        "date_published": "2023-01-24T00:00:00.000Z"
+    },
+    {
+        "id" : "/web-scraping-with-node-and-cheerio/index.html",
+        "title": "Web Scraping with Node and Cheerio",
+        "url": "https://rknight.me/web-scraping-with-node-and-cheerio/",
+        "content_text": "A short tutorial on how to use Node and Cheerio to scrape some data from PSN profiles",
+        "date_published": "2023-01-22T00:00:00.000Z"
+    },
+    {
+        "id" : "/automating-my-now-page/index.html",
+        "title": "Automating My Now Page",
+        "url": "https://rknight.me/automating-my-now-page/",
+        "content_text": "How I automated my now page updates",
+        "date_published": "2023-01-21T00:00:00.000Z"
+    },
+    {
+        "id" : "/navigate-project-folders-with-pick/index.html",
+        "title": "Navigate Project Folders with Pick",
+        "url": "https://rknight.me/navigate-project-folders-with-pick/",
+        "content_text": "Using pick to jump to a project quickly",
+        "date_published": "2023-01-19T00:00:00.000Z"
+    },
+    {
+        "id" : "/link-dump/index.html",
+        "title": "Link Dump",
+        "url": "https://rknight.me/link-dump/",
+        "content_text": "A selection of interesting links from my overflowing read later list",
+        "date_published": "2023-01-15T00:00:00.000Z"
+    },
+    {
+        "id" : "/bye-almanac-hello-lantern/index.html",
+        "title": "Bye Almanac, Hello Lantern",
+        "url": "https://rknight.me/bye-almanac-hello-lantern/",
+        "content_text": "Retiring my media blogging engine Almanac and launching it&#39;s spirtual successor Lantern",
+        "date_published": "2023-01-14T00:00:00.000Z"
+    },
+    {
+        "id" : "/echo-rss-to-microblog/index.html",
+        "title": "Import RSS to Micro.blog and Mastodon with Echo",
+        "url": "https://rknight.me/echo-rss-to-microblog/",
+        "content_text": "Echo is a node script to post new items from an RSS feed to Micro.blog",
+        "date_published": "2023-01-10T00:00:00.000Z"
+    },
+    {
+        "id" : "/blogs-and-wikis-and-links/index.html",
+        "title": "Blogs and Wikis and Links",
+        "url": "https://rknight.me/blogs-and-wikis-and-links/",
+        "content_text": "A brain dump of thoughts of how to handle links, wikis, and websites",
+        "date_published": "2023-01-07T00:00:00.000Z"
+    },
+    {
+        "id" : "/using-pagefind-with-eleventy-for-search/index.html",
+        "title": "Using PageFind with Eleventy for Search",
+        "url": "https://rknight.me/using-pagefind-with-eleventy-for-search/",
+        "content_text": "How to use PageFind to implement search for an Eleventy site",
+        "date_published": "2023-01-04T00:00:00.000Z"
+    },
+    {
+        "id" : "/just-2022-things/index.html",
+        "title": "Just 2022 Things",
+        "url": "https://rknight.me/just-2022-things/",
+        "content_text": "A big list of things that happened in 2022",
+        "date_published": "2022-12-30T00:00:00.000Z"
+    },
+    {
+        "id" : "/bulding-podcast-site-eleventy/index.html",
+        "title": "Building a Podcast Site with Eleventy",
+        "url": "https://rknight.me/bulding-podcast-site-eleventy/",
+        "content_text": "Moving Ruminate&#39;s site from Simplecast to Eleventy",
+        "date_published": "2022-12-28T00:00:00.000Z"
+    },
+    {
+        "id" : "/two-social-networks-in-this-economy/index.html",
+        "title": "Two Social Networks? In This Economy?",
+        "url": "https://rknight.me/two-social-networks-in-this-economy/",
+        "content_text": "Why I&#39;m using Micro.blog and Mastodon",
+        "date_published": "2022-12-22T00:00:00.000Z"
+    },
+    {
+        "id" : "/pramis-challenge/index.html",
+        "title": "Prami&#39;s Challenge",
+        "url": "https://rknight.me/pramis-challenge/",
+        "content_text": "",
+        "date_published": "2022-12-18T07:43:47.235Z"
+    },
+    {
+        "id" : "/chatcgt-and-mysql-database-schemas/index.html",
+        "title": "ChatCGT and mySQL Database Schemas",
+        "url": "https://rknight.me/chatcgt-and-mysql-database-schemas/",
+        "content_text": "",
+        "date_published": "2022-12-16T19:38:40.307Z"
+    },
+    {
+        "id" : "/lite-youtube-for-micro-blog/index.html",
+        "title": "Lite YouTube for Micro.blog",
+        "url": "https://rknight.me/lite-youtube-for-micro-blog/",
+        "content_text": "A plugin to automatically append Lite YouTube embeds to posts",
+        "date_published": "2022-12-06T00:00:00.000Z"
+    },
+    {
+        "id" : "/office-setup/index.html",
+        "title": "My Office Setup",
+        "url": "https://rknight.me/office-setup/",
+        "content_text": "My office setup, originally written for Club Macstories",
+        "date_published": "2022-12-05T00:00:00.000Z"
+    },
+    {
+        "id" : "/my-favourite-albums-of-2022/index.html",
+        "title": "My Favourite Albums of 2022",
+        "url": "https://rknight.me/my-favourite-albums-of-2022/",
+        "content_text": "My favourite albums of 2022",
+        "date_published": "2022-12-02T19:50:00.081Z"
+    },
+    {
+        "id" : "/how-not-to-copy-gif-to-clipboard-programatically/index.html",
+        "title": "How to Copy Gifs to Clipboard Programatically",
+        "url": "https://rknight.me/how-not-to-copy-gif-to-clipboard-programatically/",
+        "content_text": "My futile attempts at trying to copy a gif to the clipboard programatically",
+        "date_published": "2022-12-01T00:00:00.000Z"
+    },
+    {
+        "id" : "/music-replay-2022/index.html",
+        "title": "Music Replay 2022",
+        "url": "https://rknight.me/music-replay-2022/",
+        "content_text": "My 2022 music replay from Apple Music",
+        "date_published": "2022-11-29T16:33:59.480Z"
+    },
+    {
+        "id" : "/importing-tweets-into-microblog/index.html",
+        "title": "Importing Tweets into Micro.blog",
+        "url": "https://rknight.me/importing-tweets-into-microblog/",
+        "content_text": "A script to import tweets from your tweet archive to Micro.blog",
+        "date_published": "2022-11-17T00:00:00.000Z"
+    },
+    {
+        "id" : "/the-best-tweets/index.html",
+        "title": "The &quot;Best&quot; Tweets",
+        "url": "https://rknight.me/the-best-tweets/",
+        "content_text": "My post popular tweets before Twitter dies",
+        "date_published": "2022-11-15T00:00:00.000Z"
+    },
+    {
+        "id" : "/year-of-renovation/index.html",
+        "title": "Year of Renovation",
+        "url": "https://rknight.me/year-of-renovation/",
+        "content_text": "Before and after photos of our house after renovation",
+        "date_published": "2022-11-08T00:00:00.000Z"
+    },
+    {
+        "id" : "/follow-mastodon-user-on-micro.blog-shortcut/index.html",
+        "title": "Follow Mastodon User on Micro.blog Shortcut",
+        "url": "https://rknight.me/follow-mastodon-user-on-micro.blog-shortcut/",
+        "content_text": "A shortcut to redirect to the correct follow page to follow a Mastodon user on Micro.blog",
+        "date_published": "2022-11-03T00:00:00.000Z"
+    },
+    {
+        "id" : "/fix-for-bluetooth-audio-cutting-out-on-the-mac/index.html",
+        "title": "Fix for Bluetooth Audio Cutting Out on the Mac",
+        "url": "https://rknight.me/fix-for-bluetooth-audio-cutting-out-on-the-mac/",
+        "content_text": "A fix for bluetooth audio cutting out on MacOS",
+        "date_published": "2022-09-14T00:00:00.000Z"
+    },
+    {
+        "id" : "/thoughts-on-micro-blog/index.html",
+        "title": "Thoughts on Micro.blog",
+        "url": "https://rknight.me/thoughts-on-micro-blog/",
+        "content_text": "My thoughts on using Micro.blog for the past two weeks",
+        "date_published": "2022-05-14T00:00:00.000Z"
+    },
+    {
+        "id" : "/get-safari-tabs-shortcut/index.html",
+        "title": "Get Safari Tabs Shortcut",
+        "url": "https://rknight.me/get-safari-tabs-shortcut/",
+        "content_text": "My MacStories Automation April entry",
+        "date_published": "2022-05-13T00:00:00.000Z"
+    },
+    {
+        "id" : "/save-bookmark-to-micro-blog-shortcut/index.html",
+        "title": "Save Bookmark to Micro.blog Shortcut",
+        "url": "https://rknight.me/save-bookmark-to-micro-blog-shortcut/",
+        "content_text": "A shortcut to save bookmarks on micro.blog",
+        "date_published": "2022-04-28T00:00:00.000Z"
+    },
+    {
+        "id" : "/building-a-pisight/index.html",
+        "title": "Building a PiSight",
+        "url": "https://rknight.me/building-a-pisight/",
+        "content_text": "My notes on building a PiSight",
+        "date_published": "2022-02-10T00:00:00.000Z"
+    },
+    {
+        "id" : "/monzo-pot-image-generator-version-2/index.html",
+        "title": "Monzo Pot Image Generator Version Two",
+        "url": "https://rknight.me/monzo-pot-image-generator-version-2/",
+        "content_text": "Updated version with more icons and options",
+        "date_published": "2021-08-29T00:00:00.000Z"
+    },
+    {
+        "id" : "/intersect/index.html",
+        "title": "Intersect",
+        "url": "https://rknight.me/intersect/",
+        "content_text": "Intersect is a personal wiki built with Eleventy",
+        "date_published": "2021-08-23T00:00:00.000Z"
+    },
+    {
+        "id" : "/calendar-events-alfred-workflow/index.html",
+        "title": "Calendar Events Alfred Workflow",
+        "url": "https://rknight.me/calendar-events-alfred-workflow/",
+        "content_text": "An Alfred workflow to manage calendars on your Mac",
+        "date_published": "2021-07-22T00:00:00.000Z"
+    },
+    {
+        "id" : "/reminders-alfred-workflow/index.html",
+        "title": "Reminders Alfred Workflow",
+        "url": "https://rknight.me/reminders-alfred-workflow/",
+        "content_text": "An Alfred workflow to manage Reminders on your Mac",
+        "date_published": "2021-07-19T00:00:00.000Z"
+    },
+    {
+        "id" : "/monzo-pot-image-generator/index.html",
+        "title": "Monzo Pot Image Generator",
+        "url": "https://rknight.me/monzo-pot-image-generator/",
+        "content_text": "Generate images for your Monzo pots",
+        "date_published": "2020-07-21T00:00:00.000Z"
+    },
+    {
+        "id" : "/fifa-street-ps2-game-faqs/index.html",
+        "title": "Game FAQs",
+        "url": "https://rknight.me/fifa-street-ps2-game-faqs/",
+        "content_text": "Before YouTube was the go-to place for game tutorials, GameFAQs was the best place for video game guides. I wrote one for Fifa Street on the PS2",
+        "date_published": "2020-02-14T00:00:00.000Z"
+    },
+    {
+        "id" : "/changing-your-name-by-deed-poll/index.html",
+        "title": "Changing Your Name by Deed Poll",
+        "url": "https://rknight.me/changing-your-name-by-deed-poll/",
+        "content_text": "I changed my name and there&#39;s some things that would have been good to know before I started",
+        "date_published": "2019-09-08T00:00:00.000Z"
+    },
+    {
+        "id" : "/convert-spotify-facebook-to-email-login/index.html",
+        "title": "Convert a Spotify Account From Facebook to Email Login",
+        "url": "https://rknight.me/convert-spotify-facebook-to-email-login/",
+        "content_text": "Despite what Spotify tell you, you can unlink your account from Facebook",
+        "date_published": "2018-03-21T00:00:00.000Z"
+    },
+    {
+        "id" : "/homescreen-november-2017/index.html",
+        "title": "My Home Screen (November 2017)",
+        "url": "https://rknight.me/homescreen-november-2017/",
+        "content_text": "My iPhone home screen as of November 2017",
+        "date_published": "2018-03-15T15:25:45.000Z"
+    },
+    {
+        "id" : "/notes-about-setting-up-retropie/index.html",
+        "title": "Notes About Setting up RetroPie",
+        "url": "https://rknight.me/notes-about-setting-up-retropie/",
+        "content_text": "",
+        "date_published": "2017-07-04T10:14:15.000Z"
+    },
+    {
+        "id" : "/getting-closer-to-the-perfect-tv/index.html",
+        "title": "Getting Closer to the Perfect TV",
+        "url": "https://rknight.me/getting-closer-to-the-perfect-tv/",
+        "content_text": "",
+        "date_published": "2017-05-15T00:00:00.000Z"
+    },
+    {
+        "id" : "/hdr-hisense-tv-ps4/index.html",
+        "title": "Enable HDR with PS4 on Hisense H43M3000",
+        "url": "https://rknight.me/hdr-hisense-tv-ps4/",
+        "content_text": "Enabling PS4 HDR on Hisense H43M3000",
+        "date_published": "2017-05-05T00:00:00.000Z"
+    },
+    {
+        "id" : "/jekyll-category-year-archive/index.html",
+        "title": "Jekyll Post Archive Grouped by Year",
+        "url": "https://rknight.me/jekyll-category-year-archive/",
+        "content_text": "Code Snippet for creating a post archive grouped by year in Jekyll",
+        "date_published": "2017-01-12T00:00:00.000Z"
+    },
+    {
+        "id" : "/oneplus-3-and-switching-to-android/index.html",
+        "title": "Thoughts on OnePlus 3 and Switching to Android",
+        "url": "https://rknight.me/oneplus-3-and-switching-to-android/",
+        "content_text": "My thoughts after just under two weeks with the OnePlus 3",
+        "date_published": "2016-10-11T00:00:00.000Z"
+    },
+    {
+        "id" : "/replacing-apps-on-android/index.html",
+        "title": "Replacing Apps on Android",
+        "url": "https://rknight.me/replacing-apps-on-android/",
+        "content_text": "The first step to switching to Android: replacing all my apps",
+        "date_published": "2016-10-06T00:00:00.000Z"
+    },
+    {
+        "id" : "/amazon-echo-initial-thoughts/index.html",
+        "title": "Amazon Echo Initial Thoughts",
+        "url": "https://rknight.me/amazon-echo-initial-thoughts/",
+        "content_text": "My initial thoughts on the Amazon Echo",
+        "date_published": "2016-09-29T00:00:00.000Z"
+    },
+    {
+        "id" : "/saving-money-on-lego-in-the-uk/index.html",
+        "title": "Saving Money on Lego in the UK",
+        "url": "https://rknight.me/saving-money-on-lego-in-the-uk/",
+        "content_text": "The UK lacks some of the stores the US have that are known for having good Lego discounts. This article outlines the methods I use to save as much money as possible when buying Lego.",
+        "date_published": "2016-03-31T00:00:00.000Z"
+    },
+    {
+        "id" : "/convert-lxf-to-bricklink-xml/index.html",
+        "title": "Convert LXF to Bricklink XML",
+        "url": "https://rknight.me/convert-lxf-to-bricklink-xml/",
+        "content_text": "How to use Rebrickable to convert an LXF file to Bricklink XML format to upload to a wanted list.",
+        "date_published": "2016-03-22T00:00:00.000Z"
+    },
+    {
+        "id" : "/third-party-apple-watch-bands/index.html",
+        "title": "Third Party Apple Watch Bands Review",
+        "url": "https://rknight.me/third-party-apple-watch-bands/",
+        "content_text": "A review of some third-party replicas of Apple&#39;s watch bands",
+        "date_published": "2015-11-16T00:00:00.000Z"
+    },
+    {
+        "id" : "/game-controller-double-standards/index.html",
+        "title": "Game Controller Double Standards",
+        "url": "https://rknight.me/game-controller-double-standards/",
+        "content_text": "The new Apple TV supports game controllers which is great. What&#39;s not so great is the fact that developers can&#39;t require them.",
+        "date_published": "2015-11-11T00:00:00.000Z"
+    },
+    {
+        "id" : "/tips-for-apple-tv-app-developers/index.html",
+        "title": "Tips for Apple TV App Developers",
+        "url": "https://rknight.me/tips-for-apple-tv-app-developers/",
+        "content_text": "Some tips for marketing your Apple TV app successfully.",
+        "date_published": "2015-11-09T00:00:00.000Z"
+    },
+    {
+        "id" : "/the-best-apple-tv-apps/index.html",
+        "title": "The Best Apple TV Apps",
+        "url": "https://rknight.me/the-best-apple-tv-apps/",
+        "content_text": "I&#39;ve started a new blog to highlight some the best and most interesting Apple TV apps available.",
+        "date_published": "2015-10-28T00:00:00.000Z"
+    },
+    {
+        "id" : "/homescreen-september-2015/index.html",
+        "title": "My Home Screen (September 2015)",
+        "url": "https://rknight.me/homescreen-september-2015/",
+        "content_text": "My iPhone home screen as of September 2015",
+        "date_published": "2015-09-11T00:00:00.000Z"
+    },
+    {
+        "id" : "/ruminate-podcast/index.html",
+        "title": "Ruminate Podcast",
+        "url": "https://rknight.me/ruminate-podcast/",
+        "content_text": "A new podcast by John Voorhees and myself",
+        "date_published": "2015-08-24T00:00:00.000Z"
+    },
+    {
+        "id" : "/manage-your-lego-collection-with-brickset/index.html",
+        "title": "Manage Your LEGO Collection with Brickset",
+        "url": "https://rknight.me/manage-your-lego-collection-with-brickset/",
+        "content_text": "Brickset is a great service for cataloging your LEGO collection. This guide will show you how to use all the main features to keep an up-to-date list of the sets and minifigures you own.",
+        "date_published": "2015-04-16T00:00:00.000Z"
+    },
+    {
+        "id" : "/simple-git-deploy/index.html",
+        "title": "Simple Git Deploy",
+        "url": "https://rknight.me/simple-git-deploy/",
+        "content_text": "A simple method to git push to deploy.",
+        "date_published": "2015-03-29T00:00:00.000Z"
+    },
+    {
+        "id" : "/remove-homestead-environment-variables/index.html",
+        "title": "Remove Laravel Homestead Environment Variables",
+        "url": "https://rknight.me/remove-homestead-environment-variables/",
+        "content_text": "How to delete envirionment variables from Laravel Homestead.",
+        "date_published": "2015-03-27T00:00:00.000Z"
+    },
+    {
+        "id" : "/stig-quote-generator/index.html",
+        "title": "Stig Quote Generator",
+        "url": "https://rknight.me/stig-quote-generator/",
+        "content_text": "This morning, I was watching Top Gear and decided it would be fun to create the Stig quote generator.",
+        "date_published": "2015-03-26T00:00:00.000Z"
+    },
+    {
+        "id" : "/ultraviolet/index.html",
+        "title": "UltraViolet: Everything is Not Awesome",
+        "url": "https://rknight.me/ultraviolet/",
+        "content_text": "I tried to redeem an UltraViolet download code. It didn&#39;t go well.",
+        "date_published": "2015-02-20T00:00:00.000Z"
+    },
+    {
+        "id" : "/fix-gmail-offline-os-x-yosemite-mail/index.html",
+        "title": "Fix Gmail SMTP Offline Error in Yosemite Mail",
+        "url": "https://rknight.me/fix-gmail-offline-os-x-yosemite-mail/",
+        "content_text": "How to fix Gmail SMTP showing as offline in Yosemite mail.",
+        "date_published": "2014-10-17T00:00:00.000Z"
+    },
+    {
+        "id" : "/apple-privacy-statement/index.html",
+        "title": "Apple Privacy Statement",
+        "url": "https://rknight.me/apple-privacy-statement/",
+        "content_text": "Apple issued a statement on privacy and government information requests.",
+        "date_published": "2014-09-18T00:00:00.000Z"
+    },
+    {
+        "id" : "/relay-fm/index.html",
+        "title": "Relay FM",
+        "url": "https://rknight.me/relay-fm/",
+        "content_text": "Myke Hurley and Stephen Hackett have launched their new podcast network, Relay FM",
+        "date_published": "2014-08-18T00:00:00.000Z"
+    },
+    {
+        "id" : "/bionic/index.html",
+        "title": "Bionic",
+        "url": "https://rknight.me/bionic/",
+        "content_text": "An ode to Bionic.",
+        "date_published": "2014-07-09T00:00:00.000Z"
+    },
+    {
+        "id" : "/how-to-install-ios8-without-a-developer-account/index.html",
+        "title": "How to Install iOS8 Beta Without a Developer Account",
+        "url": "https://rknight.me/how-to-install-ios8-without-a-developer-account/",
+        "content_text": "How to install iOS8 beta without a developer account.",
+        "date_published": "2014-06-03T00:00:00.000Z"
+    },
+    {
+        "id" : "/thoughts-on-chromecast/index.html",
+        "title": "Thoughts on Google Chromecast",
+        "url": "https://rknight.me/thoughts-on-chromecast/",
+        "content_text": "The Google Chromecast has been released in the UK, so I had to buy one and try it out.",
+        "date_published": "2014-03-21T00:00:00.000Z"
+    },
+    {
+        "id" : "/new-york/index.html",
+        "title": "New York",
+        "url": "https://rknight.me/new-york/",
+        "content_text": "I visited New York for Christmas and New Year. Here are a few recommendations for place to visit, eat and drink",
+        "date_published": "2014-01-05T00:00:00.000Z"
+    },
+    {
+        "id" : "/create-a-blank-no-header-markdown-table/index.html",
+        "title": "Create a Table in Markdown with No Headers",
+        "url": "https://rknight.me/create-a-blank-no-header-markdown-table/",
+        "content_text": "Markdown doesn&#39;t allow you to create tables without a header by default. This little hack allows you to do that.",
+        "date_published": "2013-11-12T00:00:00.000Z"
+    },
+    {
+        "id" : "/parents-take-some-responsibility/index.html",
+        "title": "Parents: Take Some Fucking Responsibility",
+        "url": "https://rknight.me/parents-take-some-responsibility/",
+        "content_text": "The Telegraph reported this morning that two six-year-olds racked up a £1000 bill through in app purchases because they knew their parents iTunes password. And of course the parents are placing the blame entirely on the developers of apps that include in-app purchases.",
+        "date_published": "2013-10-01T00:00:00.000Z"
+    },
+    {
+        "id" : "/pub-hack-1/index.html",
+        "title": "Pub Hack #1",
+        "url": "https://rknight.me/pub-hack-1/",
+        "content_text": "The first Pub Hack took place yesterday and the theme was post-apocalypse.",
+        "date_published": "2013-09-18T00:00:00.000Z"
+    },
+    {
+        "id" : "/thoughts-on-the-iphone-5s-and-5c/index.html",
+        "title": "Thoughts on the iPhone 5S and 5C",
+        "url": "https://rknight.me/thoughts-on-the-iphone-5s-and-5c/",
+        "content_text": "Apple announced two new iPhones: The 5C and the 5S will be released on the 20th of September",
+        "date_published": "2013-09-11T00:00:00.000Z"
+    },
+    {
+        "id" : "/just-delete-me-one-million-page-views/index.html",
+        "title": "JustDelete.me: One Million Page Views",
+        "url": "https://rknight.me/just-delete-me-one-million-page-views/",
+        "content_text": "Just Delete Me was launched just 10 days ago and has already had over one million page views.",
+        "date_published": "2013-08-29T08:04:32.000Z"
+    },
+    {
+        "id" : "/24-hours-of-just-delete-me/index.html",
+        "title": "24 Hours of Just Delete Me",
+        "url": "https://rknight.me/24-hours-of-just-delete-me/",
+        "content_text": "“I’m sure I’ll get a couple of hundred visitors”. That’s what I was thinking yesterday when I launched justdelete.me. I wasn’t completely wrong.",
+        "date_published": "2013-08-20T13:49:57.000Z"
+    },
+    {
+        "id" : "/just-delete-me/index.html",
+        "title": "Just Delete Me",
+        "url": "https://rknight.me/just-delete-me/",
+        "content_text": "After seeing a few tweets about how difficult it can be to delete your Skype account and then hearing that Netflix flat-out won’t delete your details I decided to build JustDelete.me.",
+        "date_published": "2013-08-19T08:00:34.000Z"
+    },
+    {
+        "id" : "/how-pf-meet-helped-me-get-a-placement/index.html",
+        "title": "How PF Meet Helped Me Get a Placement",
+        "url": "https://rknight.me/how-pf-meet-helped-me-get-a-placement/",
+        "content_text": "",
+        "date_published": "2013-08-16T16:03:13.000Z"
+    },
+    {
+        "id" : "/lego-back-to-the-future-set-review/index.html",
+        "title": "Lego Back to The Future Set Review",
+        "url": "https://rknight.me/lego-back-to-the-future-set-review/",
+        "content_text": "My review of the fourth Lego Cuusoo set, Back to The Future.",
+        "date_published": "2013-08-12T10:00:52.000Z"
+    },
+    {
+        "id" : "/instapaper-beta/index.html",
+        "title": "Instapaper Beta",
+        "url": "https://rknight.me/instapaper-beta/",
+        "content_text": "",
+        "date_published": "2013-08-10T00:00:00.000Z"
+    },
+    {
+        "id" : "/automatically-rename-tv-shows-with-hazel-and-tvnamer/index.html",
+        "title": "Automatically Rename TV Shows with Hazel and TVNamer",
+        "url": "https://rknight.me/automatically-rename-tv-shows-with-hazel-and-tvnamer/",
+        "content_text": "",
+        "date_published": "2013-08-08T00:00:00.000Z"
+    },
+    {
+        "id" : "/hold-alt-when-resizing-to-center-windows-on-os-x/index.html",
+        "title": "Hold Alt When Resizing to Center Windows on OS X",
+        "url": "https://rknight.me/hold-alt-when-resizing-to-center-windows-on-os-x/",
+        "content_text": "",
+        "date_published": "2013-03-20T00:00:00.000Z"
+    },
+    {
+        "id" : "/google-reader-and-alternatives/index.html",
+        "title": "Google Reader and Alternatives",
+        "url": "https://rknight.me/google-reader-and-alternatives/",
+        "content_text": "",
+        "date_published": "2013-03-14T00:00:00.000Z"
+    },
+    {
+        "id" : "/70decibels-and-5by5/index.html",
+        "title": "70Decibels and 5by5",
+        "url": "https://rknight.me/70decibels-and-5by5/",
+        "content_text": "",
+        "date_published": "2013-03-14T00:00:00.000Z"
+    },
+    {
+        "id" : "/diy-game-controller-rack/index.html",
+        "title": "DIY Game Controller Rack",
+        "url": "https://rknight.me/diy-game-controller-rack/",
+        "content_text": "",
+        "date_published": "2013-03-11T10:00:31.000Z"
+    },
+    {
+        "id" : "/i-am-a-tool/index.html",
+        "title": "I am a Tool",
+        "url": "https://rknight.me/i-am-a-tool/",
+        "content_text": "",
+        "date_published": "2013-03-05T17:46:51.000Z"
+    },
+    {
+        "id" : "/the-difference-between-fact-and-trivia/index.html",
+        "title": "The Difference Between Fact and Trivia",
+        "url": "https://rknight.me/the-difference-between-fact-and-trivia/",
+        "content_text": "",
+        "date_published": "2013-02-27T13:11:01.000Z"
+    },
+    {
+        "id" : "/what-to-do-when-your-itunes-account-gets-hacked/index.html",
+        "title": "What to Do When Your iTunes Account Gets Hacked",
+        "url": "https://rknight.me/what-to-do-when-your-itunes-account-gets-hacked/",
+        "content_text": "",
+        "date_published": "2012-11-26T20:30:49.000Z"
+    },
+    {
+        "id" : "/the-state-of-passbook-in-the-uk/index.html",
+        "title": "The State of Passbook in the UK",
+        "url": "https://rknight.me/the-state-of-passbook-in-the-uk/",
+        "content_text": "",
+        "date_published": "2012-10-03T14:16:50.000Z"
+    },
+    {
+        "id" : "/delivery-companies-the-antithesis-of-convenience/index.html",
+        "title": "Delivery Companies: The Antithesis of Convenience",
+        "url": "https://rknight.me/delivery-companies-the-antithesis-of-convenience/",
+        "content_text": "",
+        "date_published": "2012-08-20T18:26:47.000Z"
+    },
+    {
+        "id" : "/get-custom-screensavers-on-the-kindle-4-mac-osx/index.html",
+        "title": "Get Custom Screensavers on the Kindle 4 on OS X",
+        "url": "https://rknight.me/get-custom-screensavers-on-the-kindle-4-mac-osx/",
+        "content_text": "",
+        "date_published": "2012-03-21T01:17:56.000Z"
+    }]}
