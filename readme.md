@@ -13,5 +13,5 @@
 ## Canonical link code
 
 ```html
-<link rel="canonical" href="https://rknight.me"/>
+<link rel="canonical" href="https://rknight.me{{ page.url }}"/>
 ```
